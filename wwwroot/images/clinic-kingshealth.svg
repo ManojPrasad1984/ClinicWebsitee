@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 260" width="480" height="260">
+  <defs>
+    <linearGradient id="kh-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#101828"/>
+      <stop offset="100%" stop-color="#1e3858"/>
+    </linearGradient>
+    <linearGradient id="kh-glass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#c9a84c" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#1a3a6a" stop-opacity="0.2"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="260" fill="url(#kh-sky)"/>
+
+  <!-- Modern health centre - glass facade contemporary -->
+  <!-- Ground -->
+  <rect x="0" y="206" width="480" height="54" fill="#0a1420"/>
+  <rect x="0" y="206" width="480" height="8" fill="#12202e"/>
+
+  <!-- Side wings -->
+  <rect x="0" y="110" width="100" height="102" fill="#102030"/>
+  <rect x="8" y="118" width="84" height="94" fill="#142438"/>
+  <rect x="14" y="126" width="26" height="20" rx="2" fill="#c9a84c" fill-opacity="0.3"/>
+  <rect x="44" y="126" width="26" height="20" rx="2" fill="#c9a84c" fill-opacity="0.28"/>
+  <rect x="74" y="126" width="18" height="20" rx="2" fill="#c9a84c" fill-opacity="0.25"/>
+  <rect x="14" y="152" width="26" height="20" rx="2" fill="#c9a84c" fill-opacity="0.22"/>
+  <rect x="44" y="152" width="26" height="20" rx="2" fill="#c9a84c" fill-opacity="0.2"/>
+
+  <rect x="380" y="110" width="100" height="102" fill="#102030"/>
+  <rect x="388" y="118" width="84" height="94" fill="#142438"/>
+  <rect x="440" y="126" width="26" height="20" rx="2" fill="#c9a84c" fill-opacity="0.28"/>
+  <rect x="410" y="126" width="26" height="20" rx="2" fill="#c9a84c" fill-opacity="0.25"/>
+  <rect x="388" y="126" width="18" height="20" rx="2" fill="#c9a84c" fill-opacity="0.22"/>
+  <rect x="410" y="152" width="26" height="20" rx="2" fill="#c9a84c" fill-opacity="0.18"/>
+  <rect x="440" y="152" width="26" height="20" rx="2" fill="#c9a84c" fill-opacity="0.2"/>
+
+  <!-- Main building modern -->
+  <!-- Roof flat with parapet -->
+  <rect x="100" y="32" width="280" height="14" rx="3" fill="#1e3a62"/>
+  <rect x="98" y="28" width="284" height="6" rx="2" fill="#c9a84c" fill-opacity="0.55"/>
+  <!-- Parapet detail -->
+  <rect x="104" y="36" width="14" height="10" rx="1" fill="#2a4a80"/>
+  <rect x="124" y="36" width="14" height="10" rx="1" fill="#2a4a80"/>
+  <rect x="144" y="36" width="14" height="10" rx="1" fill="#2a4a80"/>
+  <rect x="164" y="36" width="14" height="10" rx="1" fill="#2a4a80"/>
+  <rect x="344" y="36" width="14" height="10" rx="1" fill="#2a4a80"/>
+  <rect x="324" y="36" width="14" height="10" rx="1" fill="#2a4a80"/>
+  <rect x="304" y="36" width="14" height="10" rx="1" fill="#2a4a80"/>
+  <rect x="284" y="36" width="14" height="10" rx="1" fill="#2a4a80"/>
+
+  <!-- Large glass curtain wall facade -->
+  <rect x="100" y="46" width="280" height="162" fill="#102040"/>
+  <!-- Glass panels grid -->
+  <rect x="104" y="50" width="272" height="154" fill="#0e1e38"/>
+  <!-- Horizontal mullions -->
+  <line x1="100" y1="96" x2="380" y2="96" stroke="#1e3a6a" stroke-width="3"/>
+  <line x1="100" y1="144" x2="380" y2="144" stroke="#1e3a6a" stroke-width="3"/>
+  <line x1="100" y1="168" x2="380" y2="168" stroke="#1e3a6a" stroke-width="2"/>
+  <!-- Vertical mullions -->
+  <line x1="172" y1="46" x2="172" y2="208" stroke="#1e3a6a" stroke-width="3"/>
+  <line x1="240" y1="46" x2="240" y2="208" stroke="#1e3a6a" stroke-width="3"/>
+  <line x1="308" y1="46" x2="308" y2="208" stroke="#1e3a6a" stroke-width="3"/>
+
+  <!-- Glass panels with gold tint and reflections -->
+  <rect x="106" y="50" width="62" height="44" fill="url(#kh-glass)"/>
+  <rect x="174" y="50" width="62" height="44" fill="url(#kh-glass)"/>
+  <rect x="242" y="50" width="62" height="44" fill="url(#kh-glass)"/>
+  <rect x="310" y="50" width="66" height="44" fill="url(#kh-glass)"/>
+
+  <rect x="106" y="98" width="62" height="44" fill="#c9a84c" fill-opacity="0.22"/>
+  <rect x="174" y="98" width="62" height="44" fill="#c9a84c" fill-opacity="0.26"/>
+  <rect x="242" y="98" width="62" height="44" fill="#c9a84c" fill-opacity="0.20"/>
+  <rect x="310" y="98" width="66" height="44" fill="#c9a84c" fill-opacity="0.18"/>
+
+  <!-- Reflection diagonal sweeps -->
+  <line x1="106" y1="50" x2="168" y2="94" stroke="#fff" stroke-width="18" stroke-opacity="0.03"/>
+  <line x1="174" y1="50" x2="236" y2="94" stroke="#fff" stroke-width="18" stroke-opacity="0.03"/>
+  <line x1="106" y1="98" x2="168" y2="142" stroke="#fff" stroke-width="14" stroke-opacity="0.025"/>
+
+  <!-- Lower glazing darker -->
+  <rect x="106" y="148" width="62" height="56" fill="#0c1830" fill-opacity="0.6"/>
+  <rect x="174" y="148" width="62" height="56" fill="#0c1830" fill-opacity="0.5"/>
+  <rect x="242" y="148" width="62" height="56" fill="#0c1830" fill-opacity="0.55"/>
+  <rect x="310" y="148" width="66" height="56" fill="#0c1830" fill-opacity="0.5"/>
+
+  <!-- Entry lobby - illuminated -->
+  <rect x="195" y="148" width="90" height="62" fill="#c9a84c" fill-opacity="0.28"/>
+  <rect x="195" y="148" width="90" height="62" fill="#1a4080" fill-opacity="0.3"/>
+  <!-- Lobby glow -->
+  <ellipse cx="240" cy="180" rx="45" ry="30" fill="#c9a84c" fill-opacity="0.12"/>
+
+  <!-- Automatic sliding doors -->
+  <rect x="206" y="170" width="30" height="40" rx="1" fill="#0a1020" fill-opacity="0.9"/>
+  <rect x="244" y="170" width="30" height="40" rx="1" fill="#0a1020" fill-opacity="0.9"/>
+  <rect x="207" y="171" width="28" height="38" rx="1" fill="#c9a84c" fill-opacity="0.14"/>
+  <rect x="245" y="171" width="28" height="38" rx="1" fill="#c9a84c" fill-opacity="0.14"/>
+  <line x1="221" y1="171" x2="221" y2="209" stroke="#1e3a6a" stroke-width="1.5"/>
+  <line x1="259" y1="171" x2="259" y2="209" stroke="#1e3a6a" stroke-width="1.5"/>
+
+  <!-- Building name sign -->
+  <rect x="135" y="56" width="210" height="22" rx="3" fill="#c9a84c" fill-opacity="0.18" stroke="#c9a84c" stroke-width="1" stroke-opacity="0.5"/>
+  <rect x="142" y="61" width="155" height="5" rx="2" fill="#c9a84c" fill-opacity="0.75"/>
+  <rect x="155" y="70" width="130" height="3.5" rx="1.75" fill="#c9a84c" fill-opacity="0.45"/>
+
+  <!-- Steps and entrance canopy -->
+  <rect x="175" y="204" width="130" height="5" rx="1" fill="#1e3a5a"/>
+  <rect x="182" y="209" width="116" height="4" rx="1" fill="#162848"/>
+  <!-- Canopy -->
+  <rect x="180" y="162" width="120" height="8" rx="2" fill="#c9a84c" fill-opacity="0.75"/>
+  <rect x="186" y="170" width="3" height="32" rx="1.5" fill="#c9a84c" fill-opacity="0.6"/>
+  <rect x="291" y="170" width="3" height="32" rx="1.5" fill="#c9a84c" fill-opacity="0.6"/>
+
+  <!-- Flagpole -->
+  <rect x="98" y="14" width="3" height="40" rx="1.5" fill="#2a4a72"/>
+  <rect x="101" y="14" width="26" height="18" rx="2" fill="#c9a84c" fill-opacity="0.75"/>
+  <rect x="101" y="14" width="26" height="6" rx="1" fill="#c9a84c"/>
+</svg>

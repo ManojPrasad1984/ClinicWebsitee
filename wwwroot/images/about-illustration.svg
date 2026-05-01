@@ -1,0 +1,210 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 780" width="680" height="780">
+  <defs>
+    <linearGradient id="a-wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f5f8fd"/>
+      <stop offset="100%" stop-color="#e2eaf6"/>
+    </linearGradient>
+    <linearGradient id="a-floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ccd8e8"/>
+      <stop offset="100%" stop-color="#aabcd4"/>
+    </linearGradient>
+    <linearGradient id="a-skin" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f2b98a"/>
+      <stop offset="100%" stop-color="#d9915e"/>
+    </linearGradient>
+    <linearGradient id="a-coat" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#e8f0fa"/>
+    </linearGradient>
+    <linearGradient id="a-gold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#c9a84c"/>
+      <stop offset="100%" stop-color="#e8c97a"/>
+    </linearGradient>
+    <linearGradient id="a-table" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8aaac8"/>
+      <stop offset="100%" stop-color="#5a7a98"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Wall -->
+  <rect width="680" height="780" fill="url(#a-wall)"/>
+  <!-- Wall dado rail -->
+  <rect x="0" y="400" width="680" height="5" fill="#c9a84c" fill-opacity="0.45"/>
+  <!-- Lower wall -->
+  <rect x="0" y="405" width="680" height="375" fill="#dce8f4"/>
+  <!-- Floor -->
+  <rect x="0" y="640" width="680" height="140" fill="url(#a-floor)"/>
+  <line x1="0" y1="640" x2="680" y2="640" stroke="#c9a84c" stroke-width="2" stroke-opacity="0.3"/>
+  <!-- Floor tiles -->
+  <g stroke="#b8c8dc" stroke-width="0.6" stroke-opacity="0.6">
+    <line x1="0" y1="672" x2="680" y2="672"/>
+    <line x1="0" y1="704" x2="680" y2="704"/>
+    <line x1="0" y1="736" x2="680" y2="736"/>
+    <line x1="0" y1="768" x2="680" y2="768"/>
+    <line x1="68" y1="640" x2="68" y2="780"/>
+    <line x1="136" y1="640" x2="136" y2="780"/>
+    <line x1="204" y1="640" x2="204" y2="780"/>
+    <line x1="272" y1="640" x2="272" y2="780"/>
+    <line x1="340" y1="640" x2="340" y2="780"/>
+    <line x1="408" y1="640" x2="408" y2="780"/>
+    <line x1="476" y1="640" x2="476" y2="780"/>
+    <line x1="544" y1="640" x2="544" y2="780"/>
+    <line x1="612" y1="640" x2="612" y2="780"/>
+  </g>
+
+  <!-- Wall art left: BUPA certificate frame -->
+  <rect x="38" y="50" width="130" height="165" rx="5" fill="#fff" stroke="#c9a84c" stroke-width="2" stroke-opacity="0.5"/>
+  <rect x="48" y="60" width="110" height="145" rx="3" fill="#f5f8fd"/>
+  <rect x="56" y="72" width="94" height="6" rx="3" fill="#c9a84c" fill-opacity="0.8"/>
+  <rect x="56" y="84" width="75" height="3" rx="1.5" fill="#6a8aaa" fill-opacity="0.6"/>
+  <rect x="56" y="91" width="82" height="3" rx="1.5" fill="#6a8aaa" fill-opacity="0.5"/>
+  <rect x="56" y="98" width="68" height="3" rx="1.5" fill="#6a8aaa" fill-opacity="0.5"/>
+  <circle cx="103" cy="126" r="22" fill="#c9a84c" fill-opacity="0.12" stroke="#c9a84c" stroke-width="1.5" stroke-opacity="0.5"/>
+  <text x="103" y="120" text-anchor="middle" font-size="14" font-family="Georgia,serif" fill="#c9a84c" fill-opacity="0.9">★</text>
+  <text x="103" y="135" text-anchor="middle" font-size="8" font-family="Arial,sans-serif" fill="#0d1829" fill-opacity="0.6" letter-spacing="1">BUPA</text>
+  <text x="103" y="146" text-anchor="middle" font-size="7" font-family="Arial,sans-serif" fill="#0d1829" fill-opacity="0.5" letter-spacing="0.5">RECOGNISED</text>
+  <rect x="56" y="163" width="94" height="3" rx="1.5" fill="#6a8aaa" fill-opacity="0.4"/>
+  <rect x="56" y="172" width="80" height="3" rx="1.5" fill="#6a8aaa" fill-opacity="0.35"/>
+  <rect x="56" y="185" width="94" height="12" rx="4" fill="#c9a84c" fill-opacity="0.3"/>
+
+  <!-- Wall art right: anatomical spine diagram -->
+  <rect x="515" y="45" width="125" height="175" rx="5" fill="#fff" stroke="#c9a84c" stroke-width="1.5" stroke-opacity="0.4"/>
+  <rect x="524" y="54" width="107" height="157" rx="3" fill="#eef3fa"/>
+  <text x="577" y="70" text-anchor="middle" font-size="8" font-family="Arial,sans-serif" fill="#0d1829" fill-opacity="0.5" letter-spacing="0.5">SPINE DIAGRAM</text>
+  <!-- Spine vertebrae simplified -->
+  <rect x="562" y="78" width="30" height="10" rx="5" fill="#c9a84c" fill-opacity="0.55"/>
+  <rect x="562" y="93" width="30" height="10" rx="5" fill="#c9a84c" fill-opacity="0.5"/>
+  <rect x="562" y="108" width="30" height="10" rx="5" fill="#c9a84c" fill-opacity="0.45"/>
+  <rect x="562" y="123" width="30" height="10" rx="5" fill="#c9a84c" fill-opacity="0.4"/>
+  <rect x="562" y="138" width="30" height="10" rx="5" fill="#c9a84c" fill-opacity="0.35"/>
+  <rect x="562" y="153" width="30" height="10" rx="5" fill="#c9a84c" fill-opacity="0.3"/>
+  <!-- Central cord -->
+  <line x1="577" y1="78" x2="577" y2="163" stroke="#0d1829" stroke-width="2" stroke-opacity="0.25"/>
+  <!-- Nerve lines -->
+  <line x1="577" y1="83" x2="548" y2="76" stroke="#6a8aaa" stroke-width="1" stroke-opacity="0.5"/>
+  <line x1="577" y1="83" x2="608" y2="76" stroke="#6a8aaa" stroke-width="1" stroke-opacity="0.5"/>
+  <line x1="577" y1="98" x2="545" y2="92" stroke="#6a8aaa" stroke-width="1" stroke-opacity="0.5"/>
+  <line x1="577" y1="98" x2="610" y2="92" stroke="#6a8aaa" stroke-width="1" stroke-opacity="0.5"/>
+  <line x1="577" y1="113" x2="545" y2="108" stroke="#6a8aaa" stroke-width="1" stroke-opacity="0.5"/>
+  <line x1="577" y1="113" x2="610" y2="108" stroke="#6a8aaa" stroke-width="1" stroke-opacity="0.5"/>
+  <line x1="577" y1="128" x2="544" y2="124" stroke="#6a8aaa" stroke-width="1" stroke-opacity="0.5"/>
+  <line x1="577" y1="128" x2="611" y2="124" stroke="#6a8aaa" stroke-width="1" stroke-opacity="0.5"/>
+  <rect x="524" y="170" width="107" height="30" rx="3" fill="#0d1829" fill-opacity="0.06"/>
+  <text x="577" y="188" text-anchor="middle" font-size="8" font-family="Arial,sans-serif" fill="#0d1829" fill-opacity="0.45">Cervical · Thoracic · Lumbar</text>
+
+  <!-- Plant in corner -->
+  <rect x="600" y="580" width="50" height="65" rx="5" fill="#c9a84c" fill-opacity="0.7"/>
+  <rect x="605" y="575" width="40" height="10" rx="3" fill="#a07830"/>
+  <!-- Leaves -->
+  <ellipse cx="625" cy="540" rx="18" ry="35" fill="#1a5a28" fill-opacity="0.8" transform="rotate(-15,625,540)"/>
+  <ellipse cx="645" cy="555" rx="14" ry="30" fill="#1a5a28" fill-opacity="0.7" transform="rotate(10,645,555)"/>
+  <ellipse cx="608" cy="558" rx="14" ry="28" fill="#1a5a28" fill-opacity="0.75" transform="rotate(-25,608,558)"/>
+  <ellipse cx="632" cy="525" rx="10" ry="24" fill="#2a6a38" fill-opacity="0.9" transform="rotate(5,632,525)"/>
+  <!-- Stems -->
+  <line x1="625" y1="575" x2="625" y2="540" stroke="#1a4a18" stroke-width="2.5"/>
+  <line x1="625" y1="575" x2="645" y2="555" stroke="#1a4a18" stroke-width="2"/>
+  <line x1="625" y1="575" x2="608" y2="558" stroke="#1a4a18" stroke-width="2"/>
+
+  <!-- Treatment table -->
+  <rect x="100" y="565" width="430" height="22" rx="8" fill="#6a8aaa"/>
+  <rect x="100" y="584" width="430" height="18" rx="5" fill="url(#a-table)"/>
+  <!-- Padded top -->
+  <rect x="100" y="536" width="430" height="32" rx="10" fill="#8aaac8"/>
+  <rect x="100" y="536" width="430" height="10" rx="5" fill="#9abbd8"/>
+  <!-- Legs -->
+  <rect x="125" y="602" width="16" height="50" rx="5" fill="#4a6a88"/>
+  <rect x="490" y="602" width="16" height="50" rx="5" fill="#4a6a88"/>
+  <!-- Shadow -->
+  <ellipse cx="320" cy="660" rx="218" ry="12" fill="#000" fill-opacity="0.1"/>
+
+  <!-- Patient on table -->
+  <rect x="148" y="502" width="280" height="38" rx="19" fill="#f2b98a"/>
+  <rect x="150" y="504" width="278" height="34" rx="17" fill="#3a7ad4" fill-opacity="0.72"/>
+  <!-- Legs -->
+  <rect x="400" y="507" width="105" height="30" rx="15" fill="#f2b98a"/>
+  <rect x="476" y="510" width="55" height="25" rx="12" fill="#d9915e"/>
+  <!-- Patient head -->
+  <ellipse cx="182" cy="508" rx="36" ry="34" fill="#f2b98a"/>
+  <!-- Hair -->
+  <ellipse cx="182" cy="480" rx="38" ry="21" fill="#2a1508"/>
+  <rect x="144" y="480" width="76" height="33" fill="#2a1508"/>
+  <ellipse cx="146" cy="500" rx="11" ry="24" fill="#2a1508"/>
+  <!-- Face: eyes closed, resting smile -->
+  <path d="M168 506 Q175 502 182 506" stroke="#8a5030" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  <path d="M184 508 Q191 504 198 508" stroke="#8a5030" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  <path d="M170 520 Q182 528 194 520" stroke="#c07848" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- Patient arm -->
+  <ellipse cx="205" cy="534" rx="18" ry="8" fill="#f2b98a"/>
+
+  <!-- Physiotherapist -->
+  <!-- Shoes -->
+  <ellipse cx="372" cy="660" rx="24" ry="10" fill="#0d1020"/>
+  <ellipse cx="428" cy="665" rx="24" ry="10" fill="#0d1020"/>
+  <!-- Trousers -->
+  <rect x="350" y="565" width="46" height="100" rx="10" fill="#162848"/>
+  <rect x="406" y="565" width="46" height="100" rx="10" fill="#162848"/>
+  <!-- Lab coat -->
+  <rect x="333" y="370" width="152" height="205" rx="18" fill="url(#a-coat)"/>
+  <rect x="333" y="370" width="76" height="205" rx="18" fill="#e8f0fa"/>
+  <!-- Lapels -->
+  <path d="M409 370 L390 415 L409 400 L428 415 Z" fill="#d8e8f4"/>
+  <!-- Stethoscope -->
+  <path d="M356 405 Q338 432 334 462 Q330 488 348 492" stroke="#1a1a2e" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+  <circle cx="348" cy="497" r="9" fill="#c9a84c" stroke="#a07830" stroke-width="2"/>
+  <!-- Badge -->
+  <rect x="340" y="404" width="52" height="36" rx="5" fill="#c9a84c"/>
+  <circle cx="366" cy="416" r="8" fill="#0d1829"/>
+  <rect x="344" y="427" width="38" height="4" rx="2" fill="#0d1829"/>
+  <rect x="348" y="434" width="28" height="3" rx="1.5" fill="#0d1829" fill-opacity="0.6"/>
+  <!-- Pocket pens -->
+  <rect x="426" y="398" width="5" height="28" rx="2.5" fill="#1a3058"/>
+  <rect x="434" y="398" width="5" height="24" rx="2.5" fill="#c9a84c"/>
+  <rect x="442" y="398" width="5" height="26" rx="2.5" fill="#d44a4a"/>
+
+  <!-- Arms -->
+  <path d="M348 430 Q308 448 278 462 Q260 472 250 488" stroke="#f2b98a" stroke-width="26" fill="none" stroke-linecap="round"/>
+  <path d="M348 430 Q308 448 278 462 Q260 472 250 488" stroke="#d9915e" stroke-width="21" fill="none" stroke-linecap="round"/>
+  <ellipse cx="244" cy="492" rx="20" ry="11" fill="#d9915e"/>
+  <ellipse cx="233" cy="487" rx="7" ry="4" fill="#c07848"/>
+  <ellipse cx="243" cy="484" rx="7" ry="4" fill="#c07848"/>
+  <ellipse cx="253" cy="485" rx="7" ry="4" fill="#c07848"/>
+  <!-- Right arm: tablet -->
+  <path d="M475 415 Q495 405 508 392" stroke="#f2b98a" stroke-width="24" fill="none" stroke-linecap="round"/>
+  <path d="M475 415 Q495 405 508 392" stroke="#d9915e" stroke-width="19" fill="none" stroke-linecap="round"/>
+  <rect x="498" y="330" width="62" height="82" rx="7" fill="#0d1829"/>
+  <rect x="503" y="336" width="52" height="68" rx="5" fill="#1a3a6a"/>
+  <rect x="507" y="342" width="44" height="5" rx="2" fill="#c9a84c" fill-opacity="0.7"/>
+  <rect x="507" y="351" width="35" height="3" rx="1.5" fill="#fff" fill-opacity="0.4"/>
+  <rect x="507" y="358" width="40" height="3" rx="1.5" fill="#fff" fill-opacity="0.35"/>
+  <rect x="507" y="365" width="32" height="3" rx="1.5" fill="#fff" fill-opacity="0.35"/>
+  <rect x="507" y="375" width="44" height="14" rx="3" fill="#c9a84c" fill-opacity="0.35"/>
+  <!-- Home button -->
+  <circle cx="529" cy="404" r="5" fill="#0d1829" stroke="#2a4a6a" stroke-width="1.5"/>
+
+  <!-- Therapist head -->
+  <rect x="392" y="335" width="32" height="38" rx="10" fill="#f2b98a"/>
+  <ellipse cx="408" cy="315" rx="44" ry="47" fill="#f2b98a"/>
+  <!-- Hair -->
+  <ellipse cx="408" cy="276" rx="44" ry="24" fill="#0d0806"/>
+  <rect x="364" y="276" width="88" height="36" fill="#0d0806"/>
+  <ellipse cx="368" cy="300" rx="14" ry="28" fill="#0d0806"/>
+  <ellipse cx="448" cy="298" rx="14" ry="28" fill="#0d0806"/>
+  <!-- Ears -->
+  <ellipse cx="364" cy="318" rx="8" ry="11" fill="#d9915e"/>
+  <ellipse cx="452" cy="318" rx="8" ry="11" fill="#d9915e"/>
+  <!-- Eyes -->
+  <ellipse cx="393" cy="314" rx="6" ry="6.5" fill="#2a1508"/>
+  <ellipse cx="423" cy="314" rx="6" ry="6.5" fill="#2a1508"/>
+  <ellipse cx="395" cy="312" rx="2" ry="2" fill="#fff"/>
+  <ellipse cx="425" cy="312" rx="2" ry="2" fill="#fff"/>
+  <!-- Brows -->
+  <path d="M386 305 Q393 301 400 305" stroke="#1a0a02" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M416 305 Q423 301 430 305" stroke="#1a0a02" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <!-- Nose -->
+  <path d="M405 322 Q408 332 405 335 Q411 337 417 335 Q414 332 417 322" stroke="#c07848" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <!-- Mouth -->
+  <path d="M394 347 Q408 358 422 347" stroke="#c07848" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+  <!-- Gold accent bar left edge -->
+  <rect x="0" y="0" width="6" height="780" fill="url(#a-gold)" fill-opacity="0.35"/>
+</svg>

@@ -1,0 +1,235 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 760" width="680" height="760">
+  <defs>
+    <linearGradient id="w-bg" x1="0" y1="0" x2="680" y2="760" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0d1829"/>
+      <stop offset="100%" stop-color="#1a2e50"/>
+    </linearGradient>
+    <radialGradient id="w-glow" cx="50%" cy="60%" r="45%">
+      <stop offset="0%" stop-color="#c9a84c" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#c9a84c" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="w-skin" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f2b98a"/>
+      <stop offset="100%" stop-color="#d9915e"/>
+    </linearGradient>
+    <linearGradient id="w-desk" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a4a6a"/>
+      <stop offset="100%" stop-color="#1a3050"/>
+    </linearGradient>
+    <linearGradient id="w-gold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#c9a84c"/>
+      <stop offset="100%" stop-color="#e8c97a"/>
+    </linearGradient>
+    <linearGradient id="w-floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#162338"/>
+      <stop offset="100%" stop-color="#0d1829"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="680" height="760" fill="url(#w-bg)"/>
+  <rect width="680" height="760" fill="url(#w-glow)"/>
+
+  <!-- Floor -->
+  <rect x="0" y="620" width="680" height="140" fill="url(#w-floor)"/>
+  <line x1="0" y1="620" x2="680" y2="620" stroke="#c9a84c" stroke-width="1.5" stroke-opacity="0.3"/>
+
+  <!-- Floor grid -->
+  <g stroke="#1e3050" stroke-width="0.7" stroke-opacity="0.5">
+    <line x1="0" y1="652" x2="680" y2="652"/>
+    <line x1="0" y1="684" x2="680" y2="684"/>
+    <line x1="0" y1="716" x2="680" y2="716"/>
+    <line x1="0" y1="748" x2="680" y2="748"/>
+    <line x1="68" y1="620" x2="68" y2="760"/>
+    <line x1="136" y1="620" x2="136" y2="760"/>
+    <line x1="204" y1="620" x2="204" y2="760"/>
+    <line x1="272" y1="620" x2="272" y2="760"/>
+    <line x1="340" y1="620" x2="340" y2="760"/>
+    <line x1="408" y1="620" x2="408" y2="760"/>
+    <line x1="476" y1="620" x2="476" y2="760"/>
+    <line x1="544" y1="620" x2="544" y2="760"/>
+    <line x1="612" y1="620" x2="612" y2="760"/>
+  </g>
+
+  <!-- Subtle dot matrix background -->
+  <g fill="#c9a84c" fill-opacity="0.055">
+    <circle cx="40" cy="40" r="2.5"/><circle cx="90" cy="40" r="2.5"/><circle cx="140" cy="40" r="2.5"/>
+    <circle cx="190" cy="40" r="2.5"/><circle cx="240" cy="40" r="2.5"/><circle cx="290" cy="40" r="2.5"/>
+    <circle cx="390" cy="40" r="2.5"/><circle cx="440" cy="40" r="2.5"/>
+    <circle cx="490" cy="40" r="2.5"/><circle cx="540" cy="40" r="2.5"/><circle cx="590" cy="40" r="2.5"/>
+    <circle cx="640" cy="40" r="2.5"/>
+    <circle cx="40" cy="90" r="2.5"/><circle cx="90" cy="90" r="2.5"/><circle cx="140" cy="90" r="2.5"/>
+    <circle cx="190" cy="90" r="2.5"/><circle cx="590" cy="90" r="2.5"/><circle cx="640" cy="90" r="2.5"/>
+    <circle cx="40" cy="140" r="2.5"/><circle cx="90" cy="140" r="2.5"/>
+    <circle cx="590" cy="140" r="2.5"/><circle cx="640" cy="140" r="2.5"/>
+    <circle cx="40" cy="540" r="2.5"/><circle cx="90" cy="540" r="2.5"/>
+    <circle cx="590" cy="540" r="2.5"/><circle cx="640" cy="540" r="2.5"/>
+    <circle cx="40" cy="590" r="2.5"/><circle cx="90" cy="590" r="2.5"/>
+    <circle cx="590" cy="590" r="2.5"/><circle cx="640" cy="590" r="2.5"/>
+  </g>
+
+  <!-- Patient chair back -->
+  <rect x="68" y="310" width="98" height="68" rx="10" fill="#1e3a6a"/>
+  <!-- Chair seat -->
+  <rect x="62" y="370" width="110" height="18" rx="8" fill="#1a3260"/>
+  <rect x="62" y="385" width="110" height="58" rx="6" fill="#1e3a6a"/>
+  <!-- Chair legs -->
+  <rect x="75" y="442" width="10" height="50" rx="4" fill="#162848"/>
+  <rect x="157" y="442" width="10" height="50" rx="4" fill="#162848"/>
+  <rect x="68" y="488" width="110" height="8" rx="4" fill="#162848"/>
+
+  <!-- Patient sitting in chair -->
+  <!-- Legs/feet -->
+  <rect x="82" y="430" width="32" height="70" rx="10" fill="#1e3560"/>
+  <rect x="120" y="430" width="32" height="70" rx="10" fill="#1e3560"/>
+  <ellipse cx="98" cy="506" rx="20" ry="9" fill="#0d1020"/>
+  <ellipse cx="136" cy="509" rx="20" ry="9" fill="#0d1020"/>
+  <!-- Body -->
+  <rect x="72" y="295" width="92" height="142" rx="22" fill="#f2b98a" fill-opacity="0.9"/>
+  <rect x="74" y="310" width="90" height="130" rx="20" fill="#3a62b8" fill-opacity="0.78"/>
+  <!-- Patient arm on armrest -->
+  <rect x="62" y="388" width="20" height="52" rx="6" fill="#1e3a6a"/>
+  <ellipse cx="72" cy="446" rx="18" ry="9" fill="#f2b98a"/>
+  <!-- Patient head -->
+  <ellipse cx="118" cy="278" rx="40" ry="42" fill="#f2b98a"/>
+  <!-- Hair shorter: man -->
+  <ellipse cx="118" cy="244" rx="40" ry="22" fill="#1a0e05"/>
+  <rect x="78" y="244" width="80" height="30" fill="#1a0e05"/>
+  <ellipse cx="82" cy="265" rx="12" ry="22" fill="#1a0e05"/>
+  <ellipse cx="154" cy="263" rx="12" ry="22" fill="#1a0e05"/>
+  <!-- Ears -->
+  <ellipse cx="79" cy="280" rx="8" ry="10" fill="#d9915e"/>
+  <ellipse cx="157" cy="280" rx="8" ry="10" fill="#d9915e"/>
+  <!-- Eyes -->
+  <ellipse cx="104" cy="278" rx="5.5" ry="6" fill="#2a1508"/>
+  <ellipse cx="132" cy="278" rx="5.5" ry="6" fill="#2a1508"/>
+  <ellipse cx="105.5" cy="276" rx="1.8" ry="2" fill="#fff"/>
+  <ellipse cx="133.5" cy="276" rx="1.8" ry="2" fill="#fff"/>
+  <!-- Brows -->
+  <path d="M98 269 Q104 265 110 269" stroke="#1a0e05" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M125 269 Q131 265 137 269" stroke="#1a0e05" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- Nose -->
+  <path d="M115 286 Q118 294 115 297 Q121 299 127 297 Q124 294 127 286" stroke="#c07848" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <!-- Mouth slight worried -->
+  <path d="M107 310 Q118 307 129 310" stroke="#c07848" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+  <!-- Desk -->
+  <rect x="200" y="435" width="430" height="20" rx="6" fill="#2a4a6a"/>
+  <rect x="200" y="452" width="430" height="140" rx="8" fill="url(#w-desk)"/>
+  <!-- Desk top surface reflection -->
+  <rect x="200" y="435" width="430" height="8" rx="4" fill="#3a5a7a"/>
+
+  <!-- Laptop on desk -->
+  <rect x="225" y="360" width="150" height="88" rx="6" fill="#0a0e18"/>
+  <rect x="231" y="366" width="138" height="76" rx="4" fill="#1a2e4a"/>
+  <!-- Screen: patient data -->
+  <rect x="237" y="372" width="126" height="12" rx="3" fill="#c9a84c" fill-opacity="0.65"/>
+  <text x="300" y="382" text-anchor="middle" font-size="7" font-family="Arial,sans-serif" fill="#0d1829" fill-opacity="0.8">PATIENT ASSESSMENT</text>
+  <!-- Data rows -->
+  <rect x="237" y="388" width="90" height="3" rx="1.5" fill="#fff" fill-opacity="0.42"/>
+  <rect x="237" y="395" width="110" height="3" rx="1.5" fill="#fff" fill-opacity="0.35"/>
+  <rect x="237" y="402" width="80" height="3" rx="1.5" fill="#fff" fill-opacity="0.35"/>
+  <rect x="237" y="409" width="100" height="3" rx="1.5" fill="#fff" fill-opacity="0.35"/>
+  <!-- Mini chart on screen -->
+  <polyline points="237,430 251,422 265,426 279,415 293,420 307,410 321,415 335,408 349,413 357,430" stroke="#c9a84c" stroke-width="2" fill="none" stroke-opacity="0.85" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Laptop base -->
+  <rect x="205" y="446" width="190" height="12" rx="5" fill="#0a0e18"/>
+  <rect x="270" y="454" width="60" height="4" rx="2" fill="#1a2e4a"/>
+
+  <!-- Clipboard on desk -->
+  <rect x="480" y="365" width="70" height="90" rx="5" fill="#c9a84c" fill-opacity="0.95"/>
+  <rect x="487" y="382" width="56" height="66" rx="3" fill="#fff" fill-opacity="0.96"/>
+  <rect x="505" y="371" width="34" height="16" rx="5" fill="#a07830"/>
+  <rect x="491" y="388" width="48" height="4" rx="2" fill="#6a8aaa" fill-opacity="0.55"/>
+  <rect x="491" y="396" width="38" height="3" rx="1.5" fill="#6a8aaa" fill-opacity="0.45"/>
+  <rect x="491" y="403" width="44" height="3" rx="1.5" fill="#6a8aaa" fill-opacity="0.45"/>
+  <rect x="491" y="410" width="36" height="3" rx="1.5" fill="#6a8aaa" fill-opacity="0.45"/>
+  <rect x="491" y="417" width="42" height="3" rx="1.5" fill="#6a8aaa" fill-opacity="0.45"/>
+  <rect x="491" y="424" width="48" height="3" rx="1.5" fill="#6a8aaa" fill-opacity="0.45"/>
+  <!-- Check mark on clipboard -->
+  <path d="M491 437 L497 443 L510 430" stroke="#1a5a28" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Coffee mug on desk -->
+  <rect x="565" y="410" width="34" height="32" rx="6" fill="#162840"/>
+  <rect x="568" y="413" width="28" height="26" rx="4" fill="#0d1829"/>
+  <!-- Mug handle -->
+  <path d="M599 418 Q612 418 612 426 Q612 434 599 434" stroke="#162840" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <!-- Hot steam -->
+  <path d="M576 406 Q578 398 576 390" stroke="#8aadcc" stroke-width="1.5" fill="none" stroke-opacity="0.5" stroke-linecap="round"/>
+  <path d="M582 404 Q584 394 582 386" stroke="#8aadcc" stroke-width="1.5" fill="none" stroke-opacity="0.4" stroke-linecap="round"/>
+  <path d="M588 406 Q590 396 588 388" stroke="#8aadcc" stroke-width="1.5" fill="none" stroke-opacity="0.45" stroke-linecap="round"/>
+
+  <!-- Doctor behind desk: body/coat -->
+  <rect x="360" y="290" width="160" height="160" rx="16" fill="#f0f5fb"/>
+  <rect x="360" y="290" width="80" height="160" rx="16" fill="#e2eaf8"/>
+  <!-- Collar -->
+  <path d="M440 290 L420 335 L440 320 L460 335 Z" fill="#d5e0f0"/>
+  <!-- Stethoscope -->
+  <path d="M385 320 Q365 348 360 380 Q356 405 374 408" stroke="#0d1020" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+  <circle cx="374" cy="413" r="9" fill="#c9a84c" stroke="#a07830" stroke-width="1.5"/>
+  <!-- Badge -->
+  <rect x="370" y="318" width="54" height="36" rx="5" fill="#c9a84c"/>
+  <circle cx="397" cy="330" r="8" fill="#0d1829"/>
+  <rect x="374" y="341" width="40" height="4" rx="2" fill="#0d1829"/>
+  <rect x="378" y="348" width="30" height="3" rx="1.5" fill="#0d1829" fill-opacity="0.6"/>
+  <!-- Pocket -->
+  <rect x="456" y="330" width="48" height="30" rx="4" fill="#dce8f6" stroke="#c0d0e8" stroke-width="1"/>
+  <rect x="460" y="336" width="30" height="3" rx="1.5" fill="#8aadcc" fill-opacity="0.6"/>
+  <rect x="460" y="343" width="22" height="3" rx="1.5" fill="#8aadcc" fill-opacity="0.5"/>
+  <!-- Pocket pens -->
+  <rect x="470" y="308" width="6" height="24" rx="3" fill="#1a3058"/>
+  <rect x="479" y="308" width="6" height="20" rx="3" fill="#c9a84c"/>
+
+  <!-- Doctor arms at desk -->
+  <path d="M372 350 Q330 368 295 378 Q270 386 252 382" stroke="#f2b98a" stroke-width="26" fill="none" stroke-linecap="round"/>
+  <path d="M372 350 Q330 368 295 378 Q270 386 252 382" stroke="#d9915e" stroke-width="21" fill="none" stroke-linecap="round"/>
+  <ellipse cx="244" cy="380" rx="22" ry="11" fill="#d9915e"/>
+  <path d="M495 345 Q518 335 528 322" stroke="#f2b98a" stroke-width="24" fill="none" stroke-linecap="round"/>
+  <path d="M495 345 Q518 335 528 322" stroke="#d9915e" stroke-width="19" fill="none" stroke-linecap="round"/>
+
+  <!-- Doctor head/neck -->
+  <rect x="422" y="256" width="34" height="38" rx="10" fill="#f2b98a"/>
+  <ellipse cx="439" cy="236" rx="44" ry="46" fill="#f2b98a"/>
+  <!-- Hair - woman's bun/updo -->
+  <ellipse cx="439" cy="198" rx="44" ry="24" fill="#1a0e05"/>
+  <rect x="395" y="198" width="88" height="36" fill="#1a0e05"/>
+  <ellipse cx="400" cy="222" rx="13" ry="24" fill="#1a0e05"/>
+  <ellipse cx="478" cy="220" rx="13" ry="24" fill="#1a0e05"/>
+  <!-- Bun on top -->
+  <ellipse cx="439" cy="194" rx="24" ry="18" fill="#1a0e05"/>
+  <!-- Ears -->
+  <ellipse cx="396" cy="240" rx="8" ry="10" fill="#d9915e"/>
+  <ellipse cx="482" cy="240" rx="8" ry="10" fill="#d9915e"/>
+  <!-- Earrings -->
+  <circle cx="396" cy="252" r="4" fill="#c9a84c"/>
+  <circle cx="482" cy="252" r="4" fill="#c9a84c"/>
+  <!-- Eyes -->
+  <ellipse cx="424" cy="237" rx="6" ry="6.5" fill="#3a2510"/>
+  <ellipse cx="454" cy="237" rx="6" ry="6.5" fill="#3a2510"/>
+  <ellipse cx="426" cy="235" rx="2" ry="2" fill="#fff"/>
+  <ellipse cx="456" cy="235" rx="2" ry="2" fill="#fff"/>
+  <!-- Brows -->
+  <path d="M417 228 Q424 224 431 228" stroke="#1a0e05" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M447 228 Q454 224 461 228" stroke="#1a0e05" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <!-- Nose -->
+  <path d="M436 246 Q439 255 436 258 Q442 260 448 258 Q445 255 448 246" stroke="#c07848" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <!-- Lipstick smile -->
+  <path d="M426 270 Q439 280 452 270" stroke="#d44a5a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+  <!-- BUPA badge floating top right -->
+  <rect x="550" y="55" width="106" height="68" rx="10" fill="#0d1829" fill-opacity="0.92" stroke="#c9a84c" stroke-width="1.5" stroke-opacity="0.55"/>
+  <text x="603" y="80" text-anchor="middle" font-size="10" font-family="Arial,sans-serif" fill="#c9a84c" letter-spacing="2.5">BUPA</text>
+  <text x="603" y="94" text-anchor="middle" font-size="8" font-family="Arial,sans-serif" fill="#8aadcc" letter-spacing="1">RECOGNISED</text>
+  <text x="603" y="112" text-anchor="middle" font-size="13" fill="#c9a84c">★★★★★</text>
+
+  <!-- Pulse line art top left -->
+  <polyline points="30,110 55,110 70,78 88,142 106,95 124,110 150,110 170,110" stroke="#c9a84c" stroke-width="2.5" fill="none" stroke-opacity="0.58" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Gold corner ornaments -->
+  <rect x="0" y="0" width="50" height="2.5" fill="url(#w-gold)" fill-opacity="0.55"/>
+  <rect x="0" y="0" width="2.5" height="50" fill="url(#w-gold)" fill-opacity="0.55"/>
+  <rect x="630" y="0" width="50" height="2.5" fill="url(#w-gold)" fill-opacity="0.55"/>
+  <rect x="677.5" y="0" width="2.5" height="50" fill="url(#w-gold)" fill-opacity="0.55"/>
+
+  <!-- Floor shadow -->
+  <ellipse cx="440" cy="630" rx="200" ry="14" fill="#000" fill-opacity="0.25"/>
+</svg>

@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>ExoneaHealth</RootNamespace>
+    <!-- Suppress auto-generated AssemblyInfo to avoid CS0579 duplicate attribute errors -->
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <!-- Suppress auto-generated TargetFrameworkAttribute -->
+    <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
+  </PropertyGroup>
+</Project>
