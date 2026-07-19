@@ -3,167 +3,447 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Exonea Health provides advanced physiotherapy, rehabilitation, acupuncture, shockwave therapy, joint injections and home visits across Birmingham and the West Midlands." />
-  <title>Exonea Health | Advanced Physiotherapy Clinics</title>
+  <meta name="description" content="Home Care Physio provides expert home physiotherapy with personalised treatment plans for bone, joint, muscle, sports, occupational, post-operative and neurological conditions. Home, workplace and care home visits." />
+  <title>Home Care Physio | Expert Physiotherapy delivered at Home</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* New sections: why (8-up), conditions, approach, trust, careers */
+    .feature-grid--four { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .conditions { background: var(--paper); }
+    .condition-tags { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; padding: 0; margin: 0; list-style: none; }
+    .condition-tags li { padding: 12px 22px; color: var(--navy); background: var(--white); border: 1px solid var(--line); border-radius: 999px; font-weight: 700; box-shadow: 0 8px 20px rgba(13, 24, 41, 0.05); }
+    .approach { background: #edf2f7; }
+    .approach-steps { display: grid; gap: 18px; margin-top: 30px; }
+    .approach-steps div { padding-left: 18px; border-left: 3px solid var(--gold); }
+    .approach-steps strong { display: block; margin-bottom: 5px; color: var(--navy); font-family: var(--display); }
+    .approach-steps span { color: var(--muted); line-height: 1.55; }
+    .trust { background: var(--paper); }
+    .trust-list { max-width: 780px; margin: 0 auto; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .careers { background: #edf2f7; }
+    @media (max-width: 980px) { .feature-grid--four { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (max-width: 640px) { .feature-grid--four, .trust-list { grid-template-columns: 1fr; } }
+
+    /* Rotating hero banner */
+    .promo-banner { position: relative; color: var(--white); background: var(--navy); overflow: hidden; padding: 0; }
+    .promo-track { display: grid; }
+    .promo-slide { grid-area: 1 / 1; position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; min-height: 620px; padding: 92px 60px; text-align: center; background-color: var(--navy); background-size: cover; background-position: center; opacity: 0; visibility: hidden; transition: opacity 0.7s ease; }
+    .promo-slide::before { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 50% 42%, rgba(13, 24, 41, 0.58), rgba(13, 24, 41, 0.88)); }
+    .promo-slide.is-active { opacity: 1; visibility: visible; }
+    .promo-slide > * { position: relative; z-index: 1; }
+    .promo-slide .eyebrow { margin: 0; }
+    .promo-slide h2 { margin: 0; max-width: 840px; color: var(--white); font-size: clamp(32px, 4.4vw, 56px); }
+    .promo-slide p { margin: 0; max-width: 660px; color: rgba(255, 255, 255, 0.84); font-size: 18px; line-height: 1.7; }
+    .promo-stats { display: flex; flex-wrap: wrap; justify-content: center; gap: 38px; margin: 6px 0 0; }
+    .promo-stats div { text-align: center; }
+    .promo-stats dt { color: var(--gold-light); font-family: var(--display); font-size: 30px; font-weight: 700; }
+    .promo-stats dd { margin: 4px 0 0; color: rgba(255, 255, 255, 0.72); font-size: 13px; }
+    .promo-pills { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; padding: 0; margin: 2px 0 0; list-style: none; }
+    .promo-pills li { padding: 8px 15px; color: var(--white); background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(231, 199, 108, 0.4); border-radius: 999px; font-size: 13px; font-weight: 700; }
+    .promo-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 6px; }
+    .promo-dots { position: absolute; left: 0; right: 0; bottom: 24px; z-index: 3; display: flex; justify-content: center; gap: 10px; }
+    .promo-dots button { width: 11px; height: 11px; padding: 0; border: 0; border-radius: 50%; background: rgba(255, 255, 255, 0.4); cursor: pointer; transition: background 0.2s ease, transform 0.2s ease; }
+    .promo-dots button.is-active { background: var(--gold); transform: scale(1.3); }
+    .promo-nav { position: absolute; top: 50%; transform: translateY(-50%); z-index: 3; display: grid; place-items: center; width: 46px; height: 46px; color: var(--white); background: rgba(13, 24, 41, 0.4); border: 1px solid rgba(255, 255, 255, 0.28); border-radius: 50%; cursor: pointer; transition: background 0.2s ease, color 0.2s ease; }
+    .promo-nav:hover { color: var(--navy); background: var(--gold-light); }
+    .promo-nav svg { width: 20px; height: 20px; }
+    .promo-nav--prev { left: 14px; }
+    .promo-nav--next { right: 14px; }
+    @media (max-width: 640px) {
+      .promo-slide { min-height: 560px; padding: 86px 20px 70px; }
+      .promo-stats { gap: 22px; }
+      .promo-nav { display: none; }
+    }
+
+    /* Dropdown navigation */
+    .nav-item { position: relative; }
+    .nav-parent { display: inline-flex; align-items: center; gap: 6px; }
+    .nav-caret { width: 0; height: 0; border-left: 4px solid transparent; border-right: 4px solid transparent; border-top: 5px solid currentColor; transition: transform 0.2s ease; }
+    .nav-item:hover .nav-caret, .nav-item:focus-within .nav-caret { transform: rotate(180deg); }
+    .nav-submenu { position: absolute; top: calc(100% + 10px); left: 0; z-index: 40; display: flex; flex-direction: column; min-width: 210px; padding: 10px; background: var(--white); border: 1px solid var(--line); border-radius: 10px; box-shadow: var(--shadow); opacity: 0; visibility: hidden; transform: translateY(8px); transition: opacity 0.2s ease, transform 0.2s ease; }
+    .nav-submenu::before { content: ""; position: absolute; top: -12px; left: 0; right: 0; height: 12px; }
+    .nav-item:hover .nav-submenu, .nav-item:focus-within .nav-submenu { opacity: 1; visibility: visible; transform: translateY(0); }
+    .nav-submenu a { padding: 10px 12px; border-radius: 6px; white-space: nowrap; }
+    .nav-submenu a::after { display: none; }
+    .nav-submenu a:hover { color: var(--navy); background: var(--paper); }
+    @media (max-width: 980px) {
+      .nav-item { width: 100%; }
+      .nav-parent { width: 100%; }
+      .nav-submenu { position: static; min-width: 0; padding: 0 0 8px 16px; opacity: 1; visibility: visible; transform: none; background: transparent; border: 0; box-shadow: none; }
+      .nav-submenu::before { display: none; }
+      .nav-submenu a { padding: 11px 0; }
+      .nav-caret { display: none; }
+    }
+
+    /* Service cards as icons */
+    .service-card--icon { padding: 30px 26px; }
+    .service-card--icon > div { padding: 0; }
+    .service-card .service-icon { display: grid; place-items: center; width: 60px; height: 60px; margin-bottom: 18px; border-radius: 14px; background: rgba(201, 168, 76, 0.12); border: 1px solid rgba(201, 168, 76, 0.3); opacity: 1; }
+    .service-card .service-icon svg { width: 30px; height: 30px; }
+    .service-card--icon h3 { margin-top: 10px; }
+
+    /* Careers values card */
+    .values-card { display: grid; gap: 16px; align-content: center; padding: 30px; background: var(--white); border: 1px solid var(--line); border-radius: 12px; box-shadow: var(--shadow); }
+    .value-item { display: flex; gap: 15px; align-items: flex-start; }
+    .value-icon { flex: 0 0 48px; display: grid; place-items: center; width: 48px; height: 48px; border-radius: 12px; background: rgba(201, 168, 76, 0.12); border: 1px solid rgba(201, 168, 76, 0.3); }
+    .value-icon svg { width: 24px; height: 24px; }
+    .value-item strong { display: block; margin-bottom: 3px; color: var(--navy); font-family: var(--display); }
+    .value-item span { color: var(--muted); line-height: 1.55; }
+
+    /* Team-based care graphic (Our Mission) */
+    .team-care { color: var(--white); background: var(--navy); }
+    .team-care h2 { color: var(--white); }
+    .team-care .section-heading p { color: rgba(255, 255, 255, 0.66); }
+    .team-flow { display: flex; align-items: stretch; justify-content: center; gap: 14px; }
+    .team-node { flex: 1 1 0; max-width: 340px; padding: 30px 24px; text-align: center; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(231, 199, 108, 0.22); border-radius: 14px; }
+    .team-node h3 { margin: 16px 0 8px; color: var(--white); font-family: var(--display); }
+    .team-node p { margin: 0; color: rgba(255, 255, 255, 0.66); line-height: 1.6; }
+    .team-node__icon { display: inline-grid; place-items: center; width: 66px; height: 66px; margin: 0 auto; border-radius: 50%; background: rgba(201, 168, 76, 0.14); border: 1px solid rgba(231, 199, 108, 0.4); }
+    .team-node__icon svg { width: 30px; height: 30px; }
+    .team-node--hub { background: linear-gradient(160deg, rgba(201, 168, 76, 0.18), rgba(255, 255, 255, 0.03)); border-color: rgba(231, 199, 108, 0.55); box-shadow: 0 18px 44px rgba(0, 0, 0, 0.25); }
+    .team-badge { display: inline-block; margin-bottom: 8px; padding: 5px 13px; color: var(--navy); background: var(--gold); border-radius: 999px; font-size: 11px; font-weight: 900; letter-spacing: 0.1em; text-transform: uppercase; }
+    .team-roles { display: grid; gap: 8px; padding: 0; margin: 16px 0 0; list-style: none; }
+    .team-roles li { padding: 10px 12px; color: var(--white); background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 8px; font-size: 14px; font-weight: 700; }
+    .team-arrow { display: flex; align-items: center; color: var(--gold); }
+    .team-arrow svg { width: 30px; height: 30px; }
+    .team-note { max-width: 760px; margin: 34px auto 0; padding: 18px 22px; text-align: center; color: rgba(255, 255, 255, 0.82); background: rgba(255, 255, 255, 0.04); border-left: 3px solid var(--gold); border-radius: 8px; line-height: 1.65; }
+    @media (max-width: 860px) {
+      .team-flow { flex-direction: column; align-items: center; }
+      .team-node { max-width: 460px; width: 100%; }
+      .team-arrow { transform: rotate(90deg); }
+    }
+  </style>
 </head>
 <body>
   <div class="topbar">
     <div class="topbar__badges">
       <span>BUPA recognised</span>
       <span>AXA recognised</span>
+      <span>HCPC &amp; CSP registered</span>
     </div>
     <div class="topbar__links">
-      <a href="mailto:admin@exoneahealth.co.uk">admin@exoneahealth.co.uk</a>
-      <a href="tel:+447721551405">+44 7721 551405</a>
+      <a href="mailto:admin@homecarephysio.co.uk">admin@homecarephysio.co.uk</a>
+      <a href="tel:+443333399024">0333 339 9024</a>
       <button type="button" class="text-button" data-open-modal>Quick enquiry</button>
     </div>
   </div>
 
   <header class="site-header" id="mainNav">
-    <a href="#home" class="brand">Exonea <span>Health</span></a>
+    <a href="#home" class="brand">Home Care <span>Physio</span></a>
     <button class="menu-toggle" id="hamBtn" type="button" aria-label="Toggle navigation" aria-controls="navLinks" aria-expanded="false">
       <span></span>
       <span></span>
       <span></span>
     </button>
     <nav class="nav-links" id="navLinks" aria-label="Primary navigation">
-      <a href="#about">Company</a>
-      <a href="#services">Services</a>
-      <a href="#clinics">Clinics</a>
-      <a href="#prices">Prices</a>
-      <a href="#contact">Contact</a>
-      <button type="button" class="nav-cta" data-open-modal>Book appointment</button>
+      <div class="nav-item">
+        <a href="#about" class="nav-parent">About Us<span class="nav-caret" aria-hidden="true"></span></a>
+        <div class="nav-submenu">
+          <a href="#mission">Our Mission</a>
+          <a href="#why">Why Us</a>
+          <a href="#careers">Career</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="#services" class="nav-parent">Services<span class="nav-caret" aria-hidden="true"></span></a>
+        <div class="nav-submenu">
+          <a href="#conditions">Conditions</a>
+        </div>
+      </div>
+      <button type="button" class="nav-cta" data-open-modal>Book home visit</button>
     </nav>
   </header>
 
   <main>
-    <section class="hero" id="home">
-      <div class="hero__content">
-        <p class="eyebrow">Advanced Physiotherapy Clinics</p>
-        <h1>Expert care for lasting recovery</h1>
-        <p class="hero__lead">Evidence-based musculoskeletal care from advanced physiotherapists, injection therapists and independent prescribers across Birmingham and the West Midlands.</p>
-        <div class="hero__actions">
-          <button type="button" class="btn btn-primary" data-open-modal>Book appointment</button>
-          <a class="btn btn-secondary" href="#services">Explore services</a>
+    <section class="promo-banner" id="home" aria-label="Highlights" aria-roledescription="carousel">
+      <button type="button" class="promo-nav promo-nav--prev" aria-label="Previous slide">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg>
+      </button>
+      <button type="button" class="promo-nav promo-nav--next" aria-label="Next slide">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
+      </button>
+
+      <div class="promo-track" aria-live="polite">
+        <div class="promo-slide is-active" role="group" aria-roledescription="slide" aria-label="1 of 5" style="background-image:url('images/google-reference/physiotherapy-exercise-1.jpg')">
+          <p class="eyebrow">Home Physiotherapy Service</p>
+          <h2>Expert Physiotherapy delivered at Home</h2>
+          <p>Recover in the comfort of your own home with personalised physiotherapy from experienced clinicians&mdash;for pain, injury, mobility and more.</p>
+          <dl class="promo-stats" aria-label="Practice highlights">
+            <div><dt>HCPC</dt><dd>&amp; CSP registered physios</dd></div>
+            <div><dt>7 days</dt><dd>Evening &amp; weekend visits</dd></div>
+            <div><dt>0</dt><dd>Waiting lists or referrals</dd></div>
+          </dl>
+          <div class="promo-actions">
+            <button type="button" class="btn btn-primary" data-open-modal>Book your home visit</button>
+            <a class="btn btn-secondary" href="#services">Explore services</a>
+          </div>
         </div>
-        <dl class="hero__stats" aria-label="Practice highlights">
-          <div><dt>5+</dt><dd>Clinic locations</dd></div>
-          <div><dt>10k+</dt><dd>Patients treated</dd></div>
-          <div><dt>15+</dt><dd>Years experience</dd></div>
-        </dl>
+
+        <div class="promo-slide" role="group" aria-roledescription="slide" aria-label="2 of 5" style="background-image:url('images/google-reference/physiotherapy-treatment-table.jpg')">
+          <p class="eyebrow">Team-based care</p>
+          <h2>An expert team behind every treatment plan</h2>
+          <p>Your physiotherapist doesn't work alone. Before your plan is finalised, your case is reviewed by our wider clinical team&mdash;so you get the expertise of several specialists at once.</p>
+          <ul class="promo-pills">
+            <li>Clinical leads</li>
+            <li>Specialist physiotherapists</li>
+            <li>Independent prescriber</li>
+            <li>Injection therapists</li>
+          </ul>
+          <div class="promo-actions">
+            <button type="button" class="btn btn-primary" data-open-modal>Book your assessment</button>
+            <a class="btn btn-secondary" href="#approach">Our approach</a>
+          </div>
+        </div>
+
+        <div class="promo-slide" role="group" aria-roledescription="slide" aria-label="3 of 5" style="background-image:url('images/google-reference/physiotherapy-leg-stretch.jpg')">
+          <p class="eyebrow">Fast access</p>
+          <h2>Same-week home visits. No waiting lists.</h2>
+          <p>No GP referral required. Expert physiotherapy brought directly to your door&mdash;often within the same week.</p>
+          <div class="promo-actions">
+            <button type="button" class="btn btn-primary" data-open-modal>Book your home visit</button>
+          </div>
+        </div>
+
+        <div class="promo-slide" role="group" aria-roledescription="slide" aria-label="4 of 5" style="background-image:url('images/google-reference/physiotherapy-back-pain.jpg')">
+          <p class="eyebrow">Insurance approved</p>
+          <h2>Recognised by BUPA, AXA &amp; major insurers</h2>
+          <p>We work with major private medical insurance providers, so your physiotherapy may be fully covered.</p>
+          <div class="promo-actions">
+            <button type="button" class="btn btn-primary" data-open-modal>Check your cover</button>
+          </div>
+        </div>
+
+        <div class="promo-slide" role="group" aria-roledescription="slide" aria-label="5 of 5" style="background-image:url('images/google-reference/physiotherapy-neck-assessment.jpg')">
+          <p class="eyebrow">Flexible appointments</p>
+          <h2>Evenings, weekends &amp; home visits</h2>
+          <p>Appointments that fit around your life&mdash;at home, at your workplace or in a care home, seven days a week.</p>
+          <div class="promo-actions">
+            <a class="btn btn-primary" href="tel:+443333399024">Call 0333 339 9024</a>
+          </div>
+        </div>
       </div>
-      <div class="hero__media">
-        <img src="images/google-reference/physiotherapy-exercise-1.jpg" alt="Physiotherapist supporting a patient during a rehabilitation exercise" />
-        <div class="hero-card">
-          <strong>Same-week appointments</strong>
-          <span>No long waiting lists. No GP referral required.</span>
-        </div>
+
+      <div class="promo-dots" role="tablist" aria-label="Choose slide">
+        <button type="button" class="is-active" aria-label="Home"></button>
+        <button type="button" aria-label="Team-based care"></button>
+        <button type="button" aria-label="Fast access"></button>
+        <button type="button" aria-label="Insurance approved"></button>
+        <button type="button" aria-label="Flexible appointments"></button>
       </div>
     </section>
 
     <section class="strip" aria-label="Services">
-      <span>Physiotherapy</span>
-      <span>Shockwave therapy</span>
-      <span>Acupuncture</span>
-      <span>Joint injections</span>
-      <span>Home visits</span>
+      <span>Home Physiotherapy</span>
+      <span>Neurological Rehab</span>
+      <span>Sports Injuries</span>
+      <span>Post-Operative Care</span>
+      <span>Falls Prevention</span>
+      <span>Care Home Visits</span>
     </section>
 
     <section class="section about" id="about">
       <div class="container split">
         <div class="image-stack reveal">
-          <img src="images/google-reference/physiotherapy-neck-assessment.jpg" alt="Physiotherapist assessing a patient's neck and posture" />
-          <div class="experience-badge"><strong>15+</strong><span>years of clinical care</span></div>
+          <img src="images/google-reference/physiotherapy-clinic-assist.jpg" alt="Clinician supporting a patient during a home physiotherapy session" />
+          <div class="experience-badge"><strong>1:1</strong><span>personalised home care</span></div>
         </div>
         <div class="copy reveal">
-          <p class="eyebrow">About Exonea Health</p>
-          <h2>Premier destination for musculoskeletal care</h2>
-          <p>We combine advanced NHS experience with responsive private care, giving patients clear diagnosis, practical treatment plans and hands-on support from first assessment through recovery.</p>
+          <p class="eyebrow">About Home Care Physio</p>
+          <h2>Exceptional physiotherapy, in your own home</h2>
+          <p>We believe exceptional physiotherapy should be accessible, convenient, and personalised. Our HCPC and CSP registered physiotherapists combine extensive NHS and private healthcare experience to deliver evidence-based treatment in the comfort of your own home.</p>
+          <p>Every patient receives a comprehensive assessment followed by a personalised treatment plan developed through collaborative discussions with our specialist physiotherapists, clinical leads, independent prescriber, and injection therapist when required.</p>
           <ul class="check-list">
-            <li>NHS and private sector experienced practitioners</li>
-            <li>BUPA and AXA recognised services</li>
-            <li>Personalised, evidence-based treatment plans</li>
-            <li>Advanced injections by independent prescribers</li>
-            <li>Home visit service available across the region</li>
+            <li>Joint &amp; muscle pain</li>
+            <li>Sports injuries</li>
+            <li>Occupational health &amp; workplace injuries</li>
+            <li>Neurological conditions</li>
+            <li>Post-operative rehabilitation</li>
+            <li>Mobility &amp; balance problems</li>
           </ul>
-          <button type="button" class="btn btn-primary" data-open-modal>Get in touch</button>
+          <button type="button" class="btn btn-primary" data-open-modal>Book your home assessment</button>
         </div>
+      </div>
+    </section>
+
+    <section class="section team-care" id="mission">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">About Us &mdash; Our Mission</p>
+          <h2>The expertise of a whole team, delivered at your door</h2>
+          <p>Our mission is to make exceptional, collaborative physiotherapy accessible in your own home. Your physiotherapist never works alone&mdash;before your treatment plan is finalised, your case is discussed with our wider clinical team, so you benefit from the combined expertise of several specialists, not just one.</p>
+        </div>
+        <div class="team-flow reveal">
+          <div class="team-node">
+            <span class="team-node__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#e7c76c" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7.5" r="3.5"/><path d="M4.5 20v-.5a7.5 7.5 0 0 1 15 0V20"/></svg>
+            </span>
+            <h3>Your Physiotherapist</h3>
+            <p>Completes a thorough assessment of your symptoms, history and personal recovery goals.</p>
+          </div>
+
+          <span class="team-arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></svg>
+          </span>
+
+          <div class="team-node team-node--hub">
+            <span class="team-badge">Behind the scenes</span>
+            <span class="team-node__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#e7c76c" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M2.5 20v-.5a6.5 6.5 0 0 1 13 0V20"/><path d="M16 5.3a3 3 0 0 1 0 5.8"/><path d="M18.5 20v-.5a6.5 6.5 0 0 0-3-5.5"/></svg>
+            </span>
+            <h3>Expert Team Case Discussion</h3>
+            <p>Your case is reviewed collaboratively by:</p>
+            <ul class="team-roles">
+              <li>Clinical leads</li>
+              <li>Specialist physiotherapists</li>
+              <li>Independent prescriber</li>
+              <li>Injection therapists</li>
+            </ul>
+          </div>
+
+          <span class="team-arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></svg>
+          </span>
+
+          <div class="team-node">
+            <span class="team-node__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#e7c76c" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="4" width="12" height="17" rx="2"/><path d="M9 4V3.2a3 3 0 0 1 6 0V4"/><path d="M9.3 13.4l2 2 3.4-4"/></svg>
+            </span>
+            <h3>Your Personalised Plan</h3>
+            <p>A tailored, evidence-based treatment plan is prepared and delivered in your home.</p>
+          </div>
+        </div>
+        <p class="team-note">A multidisciplinary approach that ensures you receive the highest standard of care&mdash;the expertise of a whole team, brought to your door.</p>
       </div>
     </section>
 
     <section class="section services" id="services">
       <div class="container">
         <div class="section-heading reveal">
-          <p class="eyebrow">What we offer</p>
+          <p class="eyebrow">Our services</p>
           <h2>Specialist services for pain, mobility and recovery</h2>
-          <p>Comprehensive musculoskeletal treatments tailored to your condition, lifestyle and recovery goals.</p>
+          <p>Expert assessment, treatment and rehabilitation brought directly to your home, workplace or care home.</p>
         </div>
         <div class="service-grid">
-          <article class="service-card reveal">
-            <img src="images/google-reference/physiotherapy-treatment-table.jpg" alt="Physiotherapy treatment in a clinic" />
-            <div><span>01</span><h3>Physiotherapy</h3><p>Assessment, hands-on treatment and exercise plans for musculoskeletal, neurological and sports conditions.</p></div>
+          <article class="service-card service-card--icon reveal">
+            <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11l8-6 8 6"/><path d="M6 10v9h12v-9"/><path d="M10 19v-5h4v5"/></svg></span>
+            <div><span>01</span><h3>Home Physiotherapy</h3><p>Expert assessment and rehabilitation for joint pain, muscle injuries, arthritis, back pain, neck pain, and reduced mobility.</p></div>
           </article>
-          <article class="service-card reveal">
-            <img src="images/google-reference/acupuncture-treatment-closeup.jpg" alt="Acupuncture treatment closeup" />
-            <div><span>02</span><h3>Acupuncture</h3><p>Western medical acupuncture to reduce pain, settle sensitivity and support natural recovery.</p></div>
+          <article class="service-card service-card--icon reveal">
+            <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M7 12h2l1.6-3.2L13 15l1.3-3H17"/></svg></span>
+            <div><span>02</span><h3>Neurological Rehabilitation</h3><p>Specialist rehabilitation for stroke, Parkinson's disease, Multiple Sclerosis, spinal conditions and neurological disorders.</p></div>
           </article>
-          <article class="service-card reveal">
-            <img src="images/google-reference/physiotherapy-back-pain.jpg" alt="Physiotherapist supporting a patient with back pain" />
-            <div><span>03</span><h3>Shockwave Therapy</h3><p>Acoustic wave therapy for stubborn tendon pain, plantar fasciitis and chronic soft-tissue conditions.</p></div>
+          <article class="service-card service-card--icon reveal">
+            <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M13 3l-7 10h6l-1 8 7-10h-6z"/></svg></span>
+            <div><span>03</span><h3>Sports Injury Rehabilitation</h3><p>Helping you recover from ligament injuries, muscle tears, tendon problems and sports-related conditions.</p></div>
           </article>
-          <article class="service-card reveal">
-            <img src="images/google-reference/physiotherapy-leg-stretch.jpg" alt="Physiotherapist stretching a patient's leg" />
-            <div><span>04</span><h3>Joint Injections</h3><p>Steroid and hyaluronic injections administered with careful assessment and aftercare guidance.</p></div>
+          <article class="service-card service-card--icon reveal">
+            <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5.5A2.5 2.5 0 0 1 10.5 3h3A2.5 2.5 0 0 1 16 5.5V7"/><path d="M3 12h18"/></svg></span>
+            <div><span>04</span><h3>Occupational Health Physiotherapy</h3><p>Assessment and rehabilitation for workplace injuries, repetitive strain injuries and return-to-work programmes.</p></div>
           </article>
-          <article class="service-card reveal">
-            <img src="images/google-reference/physiotherapy-clinic-assist.jpg" alt="Physiotherapist assisting a patient in clinic" />
-            <div><span>05</span><h3>Rehabilitation</h3><p>Progressive strengthening, mobility and confidence-building programmes for long-term outcomes.</p></div>
+          <article class="service-card service-card--icon reveal">
+            <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-6.5-4.2-6.5-9A3.5 3.5 0 0 1 12 8a3.5 3.5 0 0 1 6.5 3c0 4.8-6.5 9-6.5 9z"/><path d="M6.5 12H9l1-2 2 4 1-2h4.5"/></svg></span>
+            <div><span>05</span><h3>Post-Operative Rehabilitation</h3><p>Safe recovery following joint replacement, orthopaedic surgery and other surgical procedures.</p></div>
           </article>
-          <article class="service-card reveal">
-            <img src="images/google-reference/acupuncture-wellness-session.jpg" alt="Calm therapy treatment session" />
-            <div><span>06</span><h3>Home Visits</h3><p>Clinic-quality physiotherapy at home for patients who cannot travel or need extra support.</p></div>
+          <article class="service-card service-card--icon reveal">
+            <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.2-3 7.3-7 8-4-0.7-7-3.8-7-8V6z"/><path d="M9 12l2 2 4-4"/></svg></span>
+            <div><span>06</span><h3>Falls Prevention &amp; Balance Training</h3><p>Improve confidence, reduce falls risk and maintain independence through specialist balance rehabilitation.</p></div>
+          </article>
+          <article class="service-card service-card--icon reveal">
+            <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="13" cy="4.5" r="1.6"/><path d="M13 8l-1 5"/><path d="M12 9.5L8.5 11M12 9.5l3.5 2"/><path d="M12 13l-2.5 6M12 13l2.5 6"/></svg></span>
+            <div><span>07</span><h3>Mobility &amp; Walking Rehabilitation</h3><p>Helping people regain strength, walking ability and independence after illness or injury.</p></div>
+          </article>
+          <article class="service-card service-card--icon reveal">
+            <span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11l8-6 8 6"/><path d="M6 10v9h12v-9"/><path d="M12 17.5s-2.3-1.4-2.3-3.1a1.35 1.35 0 0 1 2.3-.9 1.35 1.35 0 0 1 2.3.9c0 1.7-2.3 3.1-2.3 3.1z"/></svg></span>
+            <div><span>08</span><h3>Care Home Physiotherapy</h3><p>Specialist physiotherapy services for residents to improve mobility, function and quality of life.</p></div>
           </article>
         </div>
       </div>
     </section>
 
     <section class="section why" id="why">
-      <div class="container split split--reverse">
-        <div class="copy reveal">
+      <div class="container">
+        <div class="section-heading section-heading--left reveal">
           <p class="eyebrow">Why choose us</p>
-          <h2>Experienced clinicians, clear plans, better outcomes</h2>
-          <p>Every appointment is grounded in clinical reasoning and practical next steps, so patients understand what is happening and how recovery will move forward.</p>
-          <div class="feature-grid">
-            <div><strong>Advanced practitioners</strong><span>Post-graduate trained specialists with broad clinical experience.</span></div>
-            <div><strong>Evidence-based care</strong><span>Treatment choices guided by current clinical research.</span></div>
-            <div><strong>Personalised plans</strong><span>Rehab built around your condition, goals and daily demands.</span></div>
-            <div><strong>Fast access</strong><span>Appointments across multiple West Midlands locations.</span></div>
-          </div>
+          <h2>Experienced HCPC &amp; CSP registered physiotherapists</h2>
+          <p>Personalised treatment plans created through expert collaboration between our clinical leads, specialist physiotherapists, independent prescriber, and injection therapists.</p>
         </div>
-        <div class="image-stack reveal">
-          <img src="images/google-reference/physiotherapy-clinic-assist.jpg" alt="Physiotherapist assisting a patient during treatment" />
+        <div class="feature-grid feature-grid--four">
+          <div><strong>Team Based Rehab</strong><span>Cases are reviewed collaboratively by our clinical leads, specialist physiotherapists, independent prescriber and injection therapists.</span></div>
+          <div><strong>Experienced Specialists</strong><span>HCPC and CSP registered physiotherapists with extensive NHS and private healthcare experience.</span></div>
+          <div><strong>Personalised Treatment</strong><span>Every treatment plan is tailored specifically to your condition, lifestyle and recovery goals.</span></div>
+          <div><strong>Home, Workplace &amp; Care Home Visits</strong><span>Professional physiotherapy wherever you need us.</span></div>
+          <div><strong>Flexible Appointments</strong><span>Weekday, evening and weekend appointments available.</span></div>
+          <div><strong>No Waiting Lists</strong><span>Fast access to expert physiotherapy when you need it most.</span></div>
+          <div><strong>Insurance Approved</strong><span>Recognised by major private medical insurance providers.</span></div>
+          <div><strong>Evidence-Based Care</strong><span>Hands-on treatment combined with rehabilitation exercises and education for lasting results.</span></div>
         </div>
       </div>
     </section>
 
-    <section class="section clinics" id="clinics">
+    <section class="section conditions" id="conditions">
       <div class="container">
-        <div class="section-heading section-heading--left reveal">
-          <p class="eyebrow">Our locations</p>
-          <h2>Clinics across Birmingham and the West Midlands</h2>
+        <div class="section-heading reveal">
+          <p class="eyebrow">Conditions we treat</p>
+          <h2>We help people of all ages</h2>
+          <p>From everyday aches to complex neurological conditions, our specialists provide expert care at home.</p>
         </div>
-        <div class="clinic-grid">
-          <article class="clinic-card reveal"><img src="images/google-reference/physiotherapy-exercise-1.jpg" alt="Clinic physiotherapy exercise"><h3>Handsworth</h3><p>Nishkam Pharmacy &amp; Health Centre<br>21 Soho Road, Birmingham B21 9SN</p></article>
-          <article class="clinic-card reveal"><img src="images/google-reference/physiotherapy-leg-stretch.jpg" alt="Physiotherapy leg rehabilitation"><h3>Kings Norton</h3><p>The Natural Health Centre<br>86 The Green, Birmingham B38 8RS</p></article>
-          <article class="clinic-card reveal"><img src="images/google-reference/physiotherapy-treatment-table.jpg" alt="Physiotherapy treatment table"><h3>Kingshealth</h3><p>The Well Health Centre<br>89 Institute Road, Birmingham B14 7EU</p></article>
-          <article class="clinic-card reveal"><img src="images/google-reference/physiotherapy-back-pain.jpg" alt="Back pain physiotherapy treatment"><h3>Wolverhampton</h3><p>The Aesthetics Clinics<br>2 Barn Green, Wolverhampton WV3 7AY</p></article>
-          <article class="clinic-card reveal"><img src="images/google-reference/acupuncture-treatment-closeup.jpg" alt="Acupuncture treatment"><h3>Stourbridge</h3><p>Stourbridge Osteopathic &amp; Acupuncture Clinic<br>15-17 Lawn Ave, Stourbridge DY8 3UR</p></article>
-          <article class="clinic-card clinic-card--dark reveal"><img src="images/google-reference/acupuncture-wellness-session.jpg" alt="Home therapy style wellness session"><h3>Home Visit Service</h3><p>Professional physiotherapy delivered to your home with the same clinical care standards.</p><button type="button" class="btn btn-primary" data-open-modal>Request a visit</button></article>
+        <ul class="condition-tags reveal">
+          <li>Joint &amp; Muscle Pain</li>
+          <li>Back &amp; Neck Pain</li>
+          <li>Sports Injuries</li>
+          <li>Arthritis</li>
+          <li>Shoulder Pain</li>
+          <li>Hip &amp; Knee Pain</li>
+          <li>Post-Surgical Rehabilitation</li>
+          <li>Stroke Rehabilitation</li>
+          <li>Parkinson's Disease</li>
+          <li>Multiple Sclerosis</li>
+          <li>Balance Problems</li>
+          <li>Falls Prevention</li>
+          <li>Muscle Weakness</li>
+          <li>Mobility Difficulties</li>
+          <li>Occupational &amp; Workplace Injuries</li>
+          <li>Tendon &amp; Ligament Injuries</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section approach" id="approach">
+      <div class="container split split--reverse">
+        <div class="copy reveal">
+          <p class="eyebrow">Our approach</p>
+          <h2>Assess &bull; Treat &bull; Recover</h2>
+          <p>We begin with a detailed assessment to understand your symptoms, lifestyle and goals. Your physiotherapist will then create a personalised rehabilitation programme combining hands-on treatment, exercise therapy, education and ongoing support.</p>
+          <p>Our aim is not just to relieve pain&mdash;but to restore confidence, movement and long-term wellbeing.</p>
+          <div class="approach-steps">
+            <div><strong>Assess</strong><span>A thorough assessment to identify the cause of your symptoms.</span></div>
+            <div><strong>Treat</strong><span>A tailored plan of hands-on treatment and exercise therapy.</span></div>
+            <div><strong>Recover</strong><span>Ongoing support to help you recover safely and confidently.</span></div>
+          </div>
         </div>
+        <div class="image-stack reveal">
+          <img src="images/google-reference/acupuncture-treatment-closeup.jpg" alt="Close-up of hands-on physiotherapy treatment" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section trust" id="trust">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Why patients trust us</p>
+          <h2>Care built around you</h2>
+        </div>
+        <ul class="check-list trust-list reveal">
+          <li>Care and plans developed by an excellent multidisciplinary team</li>
+          <li>Experienced specialist physiotherapists</li>
+          <li>Home visits across the region</li>
+          <li>Personalised rehabilitation plans</li>
+          <li>Clinical excellence</li>
+          <li>Friendly, compassionate care</li>
+        </ul>
       </div>
     </section>
 
@@ -175,9 +455,35 @@
           <p>No hidden costs. We accept BUPA, AXA and other major private health insurers.</p>
         </div>
         <div class="price-grid">
-          <article class="price-card reveal"><h3>Initial Consultation</h3><strong>&pound;60</strong><span>45-60 minutes</span><ul><li>Comprehensive assessment</li><li>Diagnosis and clinical reasoning</li><li>Personalised treatment plan</li></ul><button type="button" class="btn btn-outline" data-open-modal>Book now</button></article>
+          <article class="price-card reveal"><h3>Initial Home Assessment</h3><strong>&pound;60</strong><span>45-60 minutes</span><ul><li>Comprehensive assessment</li><li>Diagnosis and clinical reasoning</li><li>Personalised treatment plan</li></ul><button type="button" class="btn btn-outline" data-open-modal>Book now</button></article>
           <article class="price-card price-card--featured reveal"><small>Most popular</small><h3>Follow-Up Physiotherapy</h3><strong>&pound;45</strong><span>30-45 minutes</span><ul><li>Hands-on treatment</li><li>Progress review</li><li>Exercise programme updates</li></ul><button type="button" class="btn btn-primary" data-open-modal>Book now</button></article>
           <article class="price-card reveal"><h3>Joint Injection</h3><strong>&pound;150</strong><span>Steroid or hyaluronic</span><ul><li>Independent prescriber led</li><li>Aseptic technique</li><li>Written aftercare advice</li></ul><button type="button" class="btn btn-outline" data-open-modal>Book now</button></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section careers" id="careers">
+      <div class="container split">
+        <div class="copy reveal">
+          <p class="eyebrow">Join our expert team</p>
+          <h2>Be part of a trusted physiotherapy team</h2>
+          <p>Be part of a trusted team dedicated to delivering exceptional physiotherapy care. We value clinical excellence, collaboration, and professional development, providing a supportive environment where you can thrive.</p>
+          <p>If you're a passionate, HCPC-registered physiotherapist looking to make a real difference in patients' lives, we'd love to hear from you.</p>
+          <button type="button" class="btn btn-primary" data-open-modal>Explore career opportunities</button>
+        </div>
+        <div class="values-card reveal">
+          <div class="value-item">
+            <span class="value-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.5 5 5.5.8-4 3.9 1 5.5L12 21l-5 -2.9 1-5.5-4-3.9 5.5-.8z"/></svg></span>
+            <div><strong>Clinical excellence</strong><span>Evidence-based care and continuous quality improvement.</span></div>
+          </div>
+          <div class="value-item">
+            <span class="value-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M2.5 20v-.5a6.5 6.5 0 0 1 13 0V20"/><path d="M16 5.3a3 3 0 0 1 0 5.8"/><path d="M18.5 20v-.5a6.5 6.5 0 0 0-3-5.5"/></svg></span>
+            <div><strong>Collaboration</strong><span>A multidisciplinary team that reviews cases together.</span></div>
+          </div>
+          <div class="value-item">
+            <span class="value-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8l9-4 9 4-9 4z"/><path d="M7 10.5V15c0 1.4 2.2 2.5 5 2.5s5-1.1 5-2.5v-4.5"/><path d="M21 8v5"/></svg></span>
+            <div><strong>Professional development</strong><span>Mentoring, training and room to grow your career.</span></div>
+          </div>
         </div>
       </div>
     </section>
@@ -185,22 +491,22 @@
     <section class="section contact" id="contact">
       <div class="container contact-grid">
         <div class="copy reveal">
-          <p class="eyebrow">Get in touch</p>
-          <h2>Start your recovery journey</h2>
-          <p>Tell us what you need help with and we will match you with the right service, practitioner and clinic.</p>
+          <p class="eyebrow">Book your home visit today</p>
+          <h2>Ready to start your recovery?</h2>
+          <p>Whether you're recovering from surgery, struggling with pain, living with a neurological condition or looking to improve your mobility, we're here to help. Speak with one of our friendly specialist case managers to arrange your home physiotherapy assessment.</p>
           <div class="contact-list">
-            <a href="tel:+447721551405">+44 7721 551405</a>
-            <a href="mailto:admin@exoneahealth.co.uk">admin@exoneahealth.co.uk</a>
-            <span>5 locations across Birmingham and the West Midlands</span>
-            <span>Home visit service available</span>
+            <a href="tel:+443333399024">Call us today: 0333 339 9024</a>
+            <a href="mailto:admin@homecarephysio.co.uk">admin@homecarephysio.co.uk</a>
+            <span>Home, workplace and care home visits across the region</span>
+            <span>Flexible appointments, including evenings and weekends</span>
           </div>
         </div>
         <form class="form-card reveal" id="contactForm">
-          <h3>Quick enquiry</h3>
+          <h3>Enquire online</h3>
           <label>Name<input type="text" name="name" autocomplete="name" required /></label>
           <label>Mobile<input type="tel" name="mobile" autocomplete="tel" /></label>
           <label>Email<input type="email" name="email" autocomplete="email" required /></label>
-          <label>Preferred clinic<select name="clinic"><option value="">Choose a clinic</option><option>Handsworth</option><option>Kings Norton</option><option>Kingshealth</option><option>Wolverhampton</option><option>Stourbridge</option><option>Home Visit</option></select></label>
+          <label>Visit type<select name="visit"><option value="">Choose a visit type</option><option>Home visit</option><option>Workplace visit</option><option>Care home visit</option></select></label>
           <label>Message<textarea name="message" rows="4"></textarea></label>
           <button type="submit" class="btn btn-primary">Send enquiry</button>
         </form>
@@ -210,30 +516,63 @@
 
   <footer class="footer">
     <div class="container footer-grid">
-      <div><a href="#home" class="brand brand--footer">Exonea <span>Health</span></a><p>Advanced physiotherapy clinics delivering evidence-based musculoskeletal care across Birmingham and the West Midlands.</p></div>
-      <div><h4>Services</h4><a href="#services">Physiotherapy</a><a href="#services">Shockwave Therapy</a><a href="#services">Acupuncture</a><a href="#services">Joint Injections</a></div>
-      <div><h4>Company</h4><a href="#about">About</a><a href="#clinics">Clinics</a><a href="#prices">Prices</a><a href="#contact">Contact</a></div>
-      <div><h4>Contact</h4><a href="tel:+447721551405">+44 7721 551405</a><a href="mailto:admin@exoneahealth.co.uk">admin@exoneahealth.co.uk</a></div>
+      <div><a href="#home" class="brand brand--footer">Home Care <span>Physio</span></a><p>Expert home physiotherapy with personalised treatment plans for bone, joint, muscle, and neurological conditions&mdash;delivered in the comfort of your own home.</p></div>
+      <div><h4>Useful Information</h4><a href="#services">How we help</a><a href="#services">Services</a><a href="#conditions">Conditions we treat</a><a href="#contact">Locations</a><a href="#contact">FAQ</a></div>
+      <div><h4>Home Care Physio</h4><a href="#about">About us</a><a href="#approach">Our approach</a><a href="#mission">Our team</a><a href="#trust">Testimonials</a><a href="#careers">Join our team</a></div>
+      <div><h4>Contact</h4><a href="tel:+443333399024">0333 339 9024</a><a href="mailto:admin@homecarephysio.co.uk">admin@homecarephysio.co.uk</a></div>
     </div>
-    <div class="container footer-bottom">&copy; 2026 Exonea Health Ltd. All rights reserved.</div>
+    <div class="container footer-bottom">&copy; 2026 Home Care Physio. All rights reserved.</div>
   </footer>
 
   <div class="modal-overlay" id="modalOverlay" hidden>
     <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
       <button class="modal-close" type="button" data-close-modal aria-label="Close">&times;</button>
-      <h2 id="modalTitle">Book an appointment</h2>
-      <p>Fill in your details and we will be in touch to confirm your booking within one business day.</p>
+      <h2 id="modalTitle">Book your home visit</h2>
+      <p>Fill in your details and our friendly team will be in touch to confirm your booking within one business day.</p>
       <form id="modalForm">
         <label>Name<input type="text" name="name" autocomplete="name" required /></label>
         <label>Mobile<input type="tel" name="mobile" autocomplete="tel" /></label>
         <label>Email<input type="email" name="email" autocomplete="email" required /></label>
-        <label>Clinic<select name="clinic"><option value="">Select a clinic</option><option>Handsworth</option><option>Kings Norton</option><option>Kingshealth</option><option>Wolverhampton</option><option>Stourbridge</option><option>Home Visit</option></select></label>
-        <label>Service<input type="text" name="service" placeholder="e.g. Physiotherapy, Shockwave Therapy" /></label>
+        <label>Visit type<select name="visit"><option value="">Select a visit type</option><option>Home visit</option><option>Workplace visit</option><option>Care home visit</option></select></label>
+        <label>Service<input type="text" name="service" placeholder="e.g. Home Physiotherapy, Neurological Rehab" /></label>
         <button type="submit" class="btn btn-primary">Send enquiry</button>
       </form>
     </div>
   </div>
 
   <script src="js/main.js"></script>
+  <script>
+    (function () {
+      var root = document.querySelector(".promo-banner");
+      if (!root) return;
+      var slides = [].slice.call(root.querySelectorAll(".promo-slide"));
+      var dots = [].slice.call(root.querySelectorAll(".promo-dots button"));
+      if (slides.length < 2) return;
+      var index = 0, timer = null, DELAY = 5500;
+      var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      function show(n) {
+        index = (n + slides.length) % slides.length;
+        slides.forEach(function (s, i) { s.classList.toggle("is-active", i === index); });
+        dots.forEach(function (d, i) { d.classList.toggle("is-active", i === index); });
+      }
+      function next() { show(index + 1); }
+      function prev() { show(index - 1); }
+      function start() { if (reduce) return; stop(); timer = window.setInterval(next, DELAY); }
+      function stop() { if (timer) { window.clearInterval(timer); timer = null; } }
+
+      dots.forEach(function (d, i) { d.addEventListener("click", function () { show(i); start(); }); });
+      var nextBtn = root.querySelector(".promo-nav--next");
+      var prevBtn = root.querySelector(".promo-nav--prev");
+      if (nextBtn) nextBtn.addEventListener("click", function () { next(); start(); });
+      if (prevBtn) prevBtn.addEventListener("click", function () { prev(); start(); });
+      root.addEventListener("mouseenter", stop);
+      root.addEventListener("mouseleave", start);
+      document.addEventListener("visibilitychange", function () { document.hidden ? stop() : start(); });
+
+      show(0);
+      start();
+    })();
+  </script>
 </body>
 </html>

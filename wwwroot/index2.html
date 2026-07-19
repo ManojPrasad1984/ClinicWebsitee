@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Home Care Physio provides expert home physiotherapy with personalised treatment plans for bone, joint, muscle, sports, occupational, post-operative and neurological conditions. Home, workplace and care home visits." />
+  <title>Home Care Physio | Expert Physiotherapy delivered at Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* New sections: why (8-up), conditions, approach, trust, careers */
+    .feature-grid--four { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .conditions { background: var(--paper); }
+    .condition-tags { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; padding: 0; margin: 0; list-style: none; }
+    .condition-tags li { padding: 12px 22px; color: var(--navy); background: var(--white); border: 1px solid var(--line); border-radius: 999px; font-weight: 700; box-shadow: 0 8px 20px rgba(13, 24, 41, 0.05); }
+    .approach { background: #edf2f7; }
+    .approach-steps { display: grid; gap: 18px; margin-top: 30px; }
+    .approach-steps div { padding-left: 18px; border-left: 3px solid var(--gold); }
+    .approach-steps strong { display: block; margin-bottom: 5px; color: var(--navy); font-family: var(--display); }
+    .approach-steps span { color: var(--muted); line-height: 1.55; }
+    .trust { background: var(--paper); }
+    .trust-list { max-width: 780px; margin: 0 auto; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .careers { background: #edf2f7; }
+    @media (max-width: 980px) { .feature-grid--four { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (max-width: 640px) { .feature-grid--four, .trust-list { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="topbar__badges">
+      <span>BUPA recognised</span>
+      <span>AXA recognised</span>
+      <span>HCPC &amp; CSP registered</span>
+    </div>
+    <div class="topbar__links">
+      <a href="mailto:admin@homecarephysio.co.uk">admin@homecarephysio.co.uk</a>
+      <a href="tel:+443333399024">0333 339 9024</a>
+      <button type="button" class="text-button" data-open-modal>Quick enquiry</button>
+    </div>
+  </div>
+
+  <header class="site-header" id="mainNav">
+    <a href="#home" class="brand">Home Care <span>Physio</span></a>
+    <button class="menu-toggle" id="hamBtn" type="button" aria-label="Toggle navigation" aria-controls="navLinks" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="nav-links" id="navLinks" aria-label="Primary navigation">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#why">Why Us</a>
+      <a href="#conditions">Conditions</a>
+      <a href="#careers">Careers</a>
+      <a href="#contact">Contact</a>
+      <button type="button" class="nav-cta" data-open-modal>Book home visit</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero__content">
+        <p class="eyebrow">Home Physiotherapy Service</p>
+        <h1>Expert Physiotherapy delivered at Home</h1>
+        <p class="hero__lead">Recover in the comfort of your own home with personalised physiotherapy from experienced clinicians. Whether you're managing pain, recovering from an injury, or improving mobility, we're here to help.</p>
+        <div class="hero__actions">
+          <button type="button" class="btn btn-primary" data-open-modal>Book your home visit</button>
+          <a class="btn btn-secondary" href="#services">Explore services</a>
+        </div>
+        <dl class="hero__stats" aria-label="Practice highlights">
+          <div><dt>HCPC</dt><dd>&amp; CSP registered physios</dd></div>
+          <div><dt>7 days</dt><dd>Evening &amp; weekend visits</dd></div>
+          <div><dt>0</dt><dd>Waiting lists or referrals</dd></div>
+        </dl>
+      </div>
+      <div class="hero__media">
+        <img src="images/google-reference/physiotherapy-exercise-1.jpg" alt="Physiotherapist supporting a patient during a rehabilitation exercise at home" />
+        <div class="hero-card">
+          <strong>No waiting time, rooms or travel required</strong>
+          <span>Expert assessment and treatment brought directly to you.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="strip" aria-label="Services">
+      <span>Home Physiotherapy</span>
+      <span>Neurological Rehab</span>
+      <span>Sports Injuries</span>
+      <span>Post-Operative Care</span>
+      <span>Falls Prevention</span>
+      <span>Care Home Visits</span>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="container split">
+        <div class="image-stack reveal">
+          <img src="images/google-reference/physiotherapy-neck-assessment.jpg" alt="Physiotherapist assessing a patient's neck and posture at home" />
+          <div class="experience-badge"><strong>1:1</strong><span>personalised home care</span></div>
+        </div>
+        <div class="copy reveal">
+          <p class="eyebrow">About Home Care Physio</p>
+          <h2>Exceptional physiotherapy, in your own home</h2>
+          <p>We believe exceptional physiotherapy should be accessible, convenient, and personalised. Our HCPC and CSP registered physiotherapists combine extensive NHS and private healthcare experience to deliver evidence-based treatment in the comfort of your own home.</p>
+          <p>Every patient receives a comprehensive assessment followed by a personalised treatment plan developed through collaborative discussions with our specialist physiotherapists, clinical leads, independent prescriber, and injection therapist when required.</p>
+          <ul class="check-list">
+            <li>Joint &amp; muscle pain</li>
+            <li>Sports injuries</li>
+            <li>Occupational health &amp; workplace injuries</li>
+            <li>Neurological conditions</li>
+            <li>Post-operative rehabilitation</li>
+            <li>Mobility &amp; balance problems</li>
+          </ul>
+          <button type="button" class="btn btn-primary" data-open-modal>Book your home assessment</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section services" id="services">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Our services</p>
+          <h2>Specialist services for pain, mobility and recovery</h2>
+          <p>Expert assessment, treatment and rehabilitation brought directly to your home, workplace or care home.</p>
+        </div>
+        <div class="service-grid">
+          <article class="service-card reveal">
+            <img src="images/google-reference/physiotherapy-treatment-table.jpg" alt="Home physiotherapy treatment" />
+            <div><span>01</span><h3>Home Physiotherapy</h3><p>Expert assessment and rehabilitation for joint pain, muscle injuries, arthritis, back pain, neck pain, and reduced mobility.</p></div>
+          </article>
+          <article class="service-card reveal">
+            <img src="images/google-reference/physiotherapy-clinic-assist.jpg" alt="Neurological rehabilitation session" />
+            <div><span>02</span><h3>Neurological Rehabilitation</h3><p>Specialist rehabilitation for stroke, Parkinson's disease, Multiple Sclerosis, spinal conditions and neurological disorders.</p></div>
+          </article>
+          <article class="service-card reveal">
+            <img src="images/google-reference/physiotherapy-leg-stretch.jpg" alt="Sports injury rehabilitation" />
+            <div><span>03</span><h3>Sports Injury Rehabilitation</h3><p>Helping you recover from ligament injuries, muscle tears, tendon problems and sports-related conditions.</p></div>
+          </article>
+          <article class="service-card reveal">
+            <img src="images/google-reference/physiotherapy-back-pain.jpg" alt="Occupational health physiotherapy" />
+            <div><span>04</span><h3>Occupational Health Physiotherapy</h3><p>Assessment and rehabilitation for workplace injuries, repetitive strain injuries and return-to-work programmes.</p></div>
+          </article>
+          <article class="service-card reveal">
+            <img src="images/google-reference/acupuncture-treatment-closeup.jpg" alt="Post-operative rehabilitation" />
+            <div><span>05</span><h3>Post-Operative Rehabilitation</h3><p>Safe recovery following joint replacement, orthopaedic surgery and other surgical procedures.</p></div>
+          </article>
+          <article class="service-card reveal">
+            <img src="images/google-reference/acupuncture-wellness-session.jpg" alt="Falls prevention and balance training" />
+            <div><span>06</span><h3>Falls Prevention &amp; Balance Training</h3><p>Improve confidence, reduce falls risk and maintain independence through specialist balance rehabilitation.</p></div>
+          </article>
+          <article class="service-card reveal">
+            <img src="images/google-reference/physiotherapy-exercise-1.jpg" alt="Mobility and walking rehabilitation" />
+            <div><span>07</span><h3>Mobility &amp; Walking Rehabilitation</h3><p>Helping people regain strength, walking ability and independence after illness or injury.</p></div>
+          </article>
+          <article class="service-card reveal">
+            <img src="images/google-reference/physiotherapy-neck-assessment.jpg" alt="Care home physiotherapy" />
+            <div><span>08</span><h3>Care Home Physiotherapy</h3><p>Specialist physiotherapy services for residents to improve mobility, function and quality of life.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section why" id="why">
+      <div class="container">
+        <div class="section-heading section-heading--left reveal">
+          <p class="eyebrow">Why choose us</p>
+          <h2>Experienced HCPC &amp; CSP registered physiotherapists</h2>
+          <p>Personalised treatment plans created through expert collaboration between our clinical leads, specialist physiotherapists, independent prescriber, and injection therapists.</p>
+        </div>
+        <div class="feature-grid feature-grid--four">
+          <div><strong>Team Based Rehab</strong><span>Cases are reviewed collaboratively by our clinical leads, specialist physiotherapists, independent prescriber and injection therapists.</span></div>
+          <div><strong>Experienced Specialists</strong><span>HCPC and CSP registered physiotherapists with extensive NHS and private healthcare experience.</span></div>
+          <div><strong>Personalised Treatment</strong><span>Every treatment plan is tailored specifically to your condition, lifestyle and recovery goals.</span></div>
+          <div><strong>Home, Workplace &amp; Care Home Visits</strong><span>Professional physiotherapy wherever you need us.</span></div>
+          <div><strong>Flexible Appointments</strong><span>Weekday, evening and weekend appointments available.</span></div>
+          <div><strong>No Waiting Lists</strong><span>Fast access to expert physiotherapy when you need it most.</span></div>
+          <div><strong>Insurance Approved</strong><span>Recognised by major private medical insurance providers.</span></div>
+          <div><strong>Evidence-Based Care</strong><span>Hands-on treatment combined with rehabilitation exercises and education for lasting results.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section conditions" id="conditions">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Conditions we treat</p>
+          <h2>We help people of all ages</h2>
+          <p>From everyday aches to complex neurological conditions, our specialists provide expert care at home.</p>
+        </div>
+        <ul class="condition-tags reveal">
+          <li>Joint &amp; Muscle Pain</li>
+          <li>Back &amp; Neck Pain</li>
+          <li>Sports Injuries</li>
+          <li>Arthritis</li>
+          <li>Shoulder Pain</li>
+          <li>Hip &amp; Knee Pain</li>
+          <li>Post-Surgical Rehabilitation</li>
+          <li>Stroke Rehabilitation</li>
+          <li>Parkinson's Disease</li>
+          <li>Multiple Sclerosis</li>
+          <li>Balance Problems</li>
+          <li>Falls Prevention</li>
+          <li>Muscle Weakness</li>
+          <li>Mobility Difficulties</li>
+          <li>Occupational &amp; Workplace Injuries</li>
+          <li>Tendon &amp; Ligament Injuries</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section approach" id="approach">
+      <div class="container split split--reverse">
+        <div class="copy reveal">
+          <p class="eyebrow">Our approach</p>
+          <h2>Assess &bull; Treat &bull; Recover</h2>
+          <p>We begin with a detailed assessment to understand your symptoms, lifestyle and goals. Your physiotherapist will then create a personalised rehabilitation programme combining hands-on treatment, exercise therapy, education and ongoing support.</p>
+          <p>Our aim is not just to relieve pain&mdash;but to restore confidence, movement and long-term wellbeing.</p>
+          <div class="approach-steps">
+            <div><strong>Assess</strong><span>A thorough assessment to identify the cause of your symptoms.</span></div>
+            <div><strong>Treat</strong><span>A tailored plan of hands-on treatment and exercise therapy.</span></div>
+            <div><strong>Recover</strong><span>Ongoing support to help you recover safely and confidently.</span></div>
+          </div>
+        </div>
+        <div class="image-stack reveal">
+          <img src="images/google-reference/physiotherapy-clinic-assist.jpg" alt="Physiotherapist assisting a patient during treatment" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section trust" id="trust">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Why patients trust us</p>
+          <h2>Care built around you</h2>
+        </div>
+        <ul class="check-list trust-list reveal">
+          <li>Care and plans developed by an excellent multidisciplinary team</li>
+          <li>Experienced specialist physiotherapists</li>
+          <li>Home visits across the region</li>
+          <li>Personalised rehabilitation plans</li>
+          <li>Clinical excellence</li>
+          <li>Friendly, compassionate care</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section prices" id="prices">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Transparent pricing</p>
+          <h2>Clear, honest pricing</h2>
+          <p>No hidden costs. We accept BUPA, AXA and other major private health insurers.</p>
+        </div>
+        <div class="price-grid">
+          <article class="price-card reveal"><h3>Initial Home Assessment</h3><strong>&pound;60</strong><span>45-60 minutes</span><ul><li>Comprehensive assessment</li><li>Diagnosis and clinical reasoning</li><li>Personalised treatment plan</li></ul><button type="button" class="btn btn-outline" data-open-modal>Book now</button></article>
+          <article class="price-card price-card--featured reveal"><small>Most popular</small><h3>Follow-Up Physiotherapy</h3><strong>&pound;45</strong><span>30-45 minutes</span><ul><li>Hands-on treatment</li><li>Progress review</li><li>Exercise programme updates</li></ul><button type="button" class="btn btn-primary" data-open-modal>Book now</button></article>
+          <article class="price-card reveal"><h3>Joint Injection</h3><strong>&pound;150</strong><span>Steroid or hyaluronic</span><ul><li>Independent prescriber led</li><li>Aseptic technique</li><li>Written aftercare advice</li></ul><button type="button" class="btn btn-outline" data-open-modal>Book now</button></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section careers" id="careers">
+      <div class="container split">
+        <div class="copy reveal">
+          <p class="eyebrow">Join our expert team</p>
+          <h2>Be part of a trusted physiotherapy team</h2>
+          <p>Be part of a trusted team dedicated to delivering exceptional physiotherapy care. We value clinical excellence, collaboration, and professional development, providing a supportive environment where you can thrive.</p>
+          <p>If you're a passionate, HCPC-registered physiotherapist looking to make a real difference in patients' lives, we'd love to hear from you.</p>
+          <button type="button" class="btn btn-primary" data-open-modal>Explore career opportunities</button>
+        </div>
+        <div class="image-stack reveal">
+          <img src="images/google-reference/physiotherapy-treatment-table.jpg" alt="Physiotherapy team member at work" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="container contact-grid">
+        <div class="copy reveal">
+          <p class="eyebrow">Book your home visit today</p>
+          <h2>Ready to start your recovery?</h2>
+          <p>Whether you're recovering from surgery, struggling with pain, living with a neurological condition or looking to improve your mobility, we're here to help. Speak with one of our friendly specialist case managers to arrange your home physiotherapy assessment.</p>
+          <div class="contact-list">
+            <a href="tel:+443333399024">Call us today: 0333 339 9024</a>
+            <a href="mailto:admin@homecarephysio.co.uk">admin@homecarephysio.co.uk</a>
+            <span>Home, workplace and care home visits across the region</span>
+            <span>Flexible appointments, including evenings and weekends</span>
+          </div>
+        </div>
+        <form class="form-card reveal" id="contactForm">
+          <h3>Enquire online</h3>
+          <label>Name<input type="text" name="name" autocomplete="name" required /></label>
+          <label>Mobile<input type="tel" name="mobile" autocomplete="tel" /></label>
+          <label>Email<input type="email" name="email" autocomplete="email" required /></label>
+          <label>Visit type<select name="visit"><option value="">Choose a visit type</option><option>Home visit</option><option>Workplace visit</option><option>Care home visit</option></select></label>
+          <label>Message<textarea name="message" rows="4"></textarea></label>
+          <button type="submit" class="btn btn-primary">Send enquiry</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div><a href="#home" class="brand brand--footer">Home Care <span>Physio</span></a><p>Expert home physiotherapy with personalised treatment plans for bone, joint, muscle, and neurological conditions&mdash;delivered in the comfort of your own home.</p></div>
+      <div><h4>Useful Information</h4><a href="#services">How we help</a><a href="#services">Services</a><a href="#conditions">Conditions we treat</a><a href="#contact">Locations</a><a href="#contact">FAQ</a></div>
+      <div><h4>Home Care Physio</h4><a href="#about">About us</a><a href="#approach">Our approach</a><a href="#why">Our physios</a><a href="#trust">Testimonials</a><a href="#careers">Join our team</a></div>
+      <div><h4>Contact</h4><a href="tel:+443333399024">0333 339 9024</a><a href="mailto:admin@homecarephysio.co.uk">admin@homecarephysio.co.uk</a></div>
+    </div>
+    <div class="container footer-bottom">&copy; 2026 Home Care Physio. All rights reserved.</div>
+  </footer>
+
+  <div class="modal-overlay" id="modalOverlay" hidden>
+    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" type="button" data-close-modal aria-label="Close">&times;</button>
+      <h2 id="modalTitle">Book your home visit</h2>
+      <p>Fill in your details and our friendly team will be in touch to confirm your booking within one business day.</p>
+      <form id="modalForm">
+        <label>Name<input type="text" name="name" autocomplete="name" required /></label>
+        <label>Mobile<input type="tel" name="mobile" autocomplete="tel" /></label>
+        <label>Email<input type="email" name="email" autocomplete="email" required /></label>
+        <label>Visit type<select name="visit"><option value="">Select a visit type</option><option>Home visit</option><option>Workplace visit</option><option>Care home visit</option></select></label>
+        <label>Service<input type="text" name="service" placeholder="e.g. Home Physiotherapy, Neurological Rehab" /></label>
+        <button type="submit" class="btn btn-primary">Send enquiry</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
